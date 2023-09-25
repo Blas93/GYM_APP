@@ -2,7 +2,7 @@ export const DeleteInformationActivityPage = () => {
     return (
     <section> 
     <h1> Delete Page </h1>
-    <p>  Se mostrará un comunicado confirmando si desea elimianr la actividad seleccioanda </p> 
+    <p>  Se mostrará un comunicado confirmando si desea elimianr la actividad seleccionada </p> 
     </section>
     );
     };

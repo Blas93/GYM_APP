@@ -12,7 +12,7 @@ import { EditInformationActivityPage } from "./pages/EditInformationActivityPage
 import { DeleteInformationActivityPage } from "./pages/DeleteInformationActivityPage.jsx";
 import { Header } from "./componentes/Header.jsx";
 import { AuthProviderComponent } from "./context/AuthContext.jsx";
-
+import '../src/App.css'
 
 function App() {
   return (

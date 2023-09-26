@@ -1,4 +1,4 @@
-div {
+/*div {
     text-align: center;
     max-width: 400px;
     margin: 0 auto;
@@ -9,18 +9,18 @@ div {
   }
   
   /* Estilos para el título */
-  h1 {
+  /*h1 {
     color: #333;
   }
   
   /* Estilos para el formulario */
-  form {
+  /*form {
     display: flex;
     flex-direction: column;
   }
   
   /* Estilos para las etiquetas y campos de entrada */
-  label {
+  /*label {
     margin-top: 10px;
     font-weight: bold;
   }
@@ -35,7 +35,7 @@ div {
   }
   
   /* Estilos para el botón de registro */
-  button {
+  /*button {
     background-color: #007bff;
     color: #fff;
     border: none;

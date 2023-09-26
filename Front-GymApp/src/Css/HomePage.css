@@ -1,41 +1,26 @@
 /* Reset de estilos para eliminar márgenes y rellenos predeterminados */
-body, h1, h2, p, ul, li, form, input, select {
+/*body, p, form, input, select {
     margin: 0;
     padding: 0;
     border: 0;
 }
 
 /* Estilo para el cuerpo de la página */
-body {
+/*body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
 }
 
 /* Estilo para el encabezado y la navegación */
-header {
+/*header {
     background-color: orange;
     color: #fff;
     padding: 20px 0;
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
 /* Estilo para el formulario de filtro */
-form {
+/*form {
     max-width: 400px;
     margin: 0 auto;
     background-color: #fff;
@@ -69,7 +54,7 @@ button[id="buscar"] {
 }
 
 /* Estilo para la página de inicio */
-.container {
+/*.container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -80,7 +65,7 @@ button[id="buscar"] {
 }
 
 /* Estilo para los resultados */
-.actividad {
+/*.actividad {
     margin-bottom: 20px;
     padding: 20px;
     border: 1px solid #ddd;
@@ -104,7 +89,7 @@ button[id="buscar"] {
 }
 
 /* Estilo para los resultados vacíos */
-.sin-resultados {
+/*.sin-resultados {
     text-align: center;
     color: #777;
     font-style: italic;

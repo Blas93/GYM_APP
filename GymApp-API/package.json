@@ -10,17 +10,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/TatanRamirez/GymApp.git"
+    "url": "git@github.com:Blas93/GYM_APP.git"
   },
   "keywords": [
-    "pompilio1988"
+    ""
   ],
-  "author": "Tatan Ramirez & Co.",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/TatanRamirez/GymApp/issues"
+    "url": "https://github.com/Blas93/GYM_APP.git"
   },
-  "homepage": "https://github.com/TatanRamirez/GymApp#readme",
+  "homepage": "https://github.com/Blas93/GYM_APP.git",
   "devDependencies": {
     "eslint": "^8.46.0",
     "eslint-plugin-vue": "^9.16.1",

@@ -5,7 +5,7 @@ const { createUser, getUserById, getUserByEmail } = require('../db/user');
 
 const newUserController = async (req, res, next) => {
   try {
-    const { name, email, password, role } = req.body;
+    const { name, email, password } = req.body;
 
     console.log(name);
     console.log(email);
@@ -19,7 +19,7 @@ const newUserController = async (req, res, next) => {
         400
       );
     }
-    const id = await createUser(name, email, password, role);
+    const id = await createUser(name, email, password);
 
     res.send({
       status: 'ok',
@@ -41,6 +41,32 @@ const getUserController = async (req, res, next) => {
       data: user,
     });
   } catch (error) {
+    next(error);
+  }
+};
+const getMeController = async (req, res, next) => {
+  
+  try {
+    const token = req.headers.authorization
+    if(!token) throw generateError('Token de autenticación no propocionado', 401)
+    const payload = jwt.verify(token, process.env.SECRET)
+    const user_id = payload.id 
+    const user = await getUserById(user_id)
+    if(!user_id) throw generateError('Usuario no encontrado',404)
+    res.send({
+     status:'ok',
+     data: user, 
+    });
+    
+  } catch(error){
+    if (error.name === 'JsonWebTokenError') {
+      const error = generateError('Token de autenticación inválido', 401);
+      next(error);
+    } 
+    if (error.name === 'TokenExpiredError') {
+      const error = generateError('Token de autenticación caducado', 401);
+      next(error);
+    }
     next(error);
   }
 };
@@ -79,5 +105,6 @@ const loginController = async (req, res, next) => {
 module.exports = {
   newUserController,
   getUserController,
+  getMeController,
   loginController,
 };

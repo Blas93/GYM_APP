@@ -2,9 +2,7 @@ import '../Css/HomePage.css'
 export const HomePage = () => {
     //El formulario meterlo en un componente Filter.jsx
     return (
-        <>
-            
-            <form method="get" >
+                <form method="get" >
                 <label htmlFor="grupoMuscular">Grupo Muscular:</label>
                 <select name="grupoMuscular" id="grupoMuscular">
                     <option value="">Todos</option>

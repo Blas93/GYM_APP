@@ -7,6 +7,7 @@ export const Auth = () => {
 <p> 
     loged is as {user.name} <button onClick={() => logout}>logOut</button>
 </p>
+    ):( 
         <ul>
             <li>
                 <Link to = "/register"> Register</Link>

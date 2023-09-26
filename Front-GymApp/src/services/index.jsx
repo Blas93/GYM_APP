@@ -2,7 +2,7 @@
 
 //conexión con el servidor para traer la infromación de la actividad
 export const getSigleActivityService = async (id) => {
-    const response = wait fetch('${process.env.REACT_APP_BACKEND}/activity/${id}');
+    const response = wait fetch(`${process.env.REACT_APP_BACKEND}/activity/${id}`), 
 
     const json = await response.json();
     if (!response.ok){

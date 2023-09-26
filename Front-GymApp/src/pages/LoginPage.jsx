@@ -6,14 +6,14 @@ export const LoginPage = () => {
     const [password, setPassword]=useState("");
     const [error, setError] = useState("");
     const { login } = useContext(AuthContext)
-const navigate =useNavigate ();
+    const navigate = useNavigate ();
 
     const handleForm =async (e) =>{
         e.preventDefault();
         try {
             const data = await loginUserServices ({email, password});
             login(data);
-            navigate("/");
+            navigate("/activities/:id");
         } catch (error) {
             setError(error.message);
         }
@@ -43,7 +43,7 @@ const navigate =useNavigate ();
         </fieldset>
 
         <button>Login</button>
-        {error ? <p> {error</p>:null} }
+        {error ? <p> {error} </p>:null} 
     </form>
     </section>
     );

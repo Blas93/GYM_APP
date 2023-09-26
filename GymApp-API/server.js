@@ -9,6 +9,7 @@ const {
   newUserController,
   getUserController,
   loginController,
+  getMeController,
 } = require('./controllers/user');
 
 const {
@@ -33,8 +34,10 @@ app.use(cors());
 
 //Rutas de usuario
 app.post('/user', newUserController);
+app.get('/user', getMeController);
 app.get('/user/:id', getUserController);
 app.post('/login', loginController);
+
 
 //Rutas de activities
 app.get('/activities', getActivitiesController);

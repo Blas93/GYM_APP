@@ -15,7 +15,7 @@ async function initDB() {
             email VARCHAR(100) UNIQUE NOT NULL,
             user_name VARCHAR(100) UNIQUE NOT NULL,
             password VARCHAR(100) NOT NULL,
-            role ENUM("client", "administrator") DEFAULT "normal" NOT NULL DEFAULT "client",
+            role ENUM("client", "administrator") DEFAULT "client",
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP
         );
         `);
@@ -51,15 +51,15 @@ async function initDB() {
 
     // Inserción de usuarios
     await connection.query(`
-INSERT INTO user (email, user_name, password, role) 
-VALUES('tatandeveloper@gymapp.com', 'Tatán', '6789', 'Administrator'),
-  ('jesusdeveloper@gymapp.com', 'Jesús', '6789', 'Administrator'),
-  ('blasdeveloper@gymapp.com', 'Blasco', '6789', 'Administrator'),
-  ('luismartinez.12@gmail.com', 'Luis', '1234', 'Client'),
-  ('mariadeveloper@gymapp.com', 'Maria', '6789', 'Administrator'),
-  ('claudiamateo@gmail.com', 'Claudia', '6789', 'Administrator'),
-  ('esteban_89@gmail.com', 'Esteban', '1234', 'Client'),
-  ('lupombo@gmail.com', 'Lucía', '6789', 'Administrator');
+INSERT INTO user (email, user_name, password) 
+VALUES('tatandeveloper@gymapp.com', 'Tatán', '6789'),
+  ('jesusdeveloper@gymapp.com', 'Jesús', '6789'),
+  ('blasdeveloper@gymapp.com', 'Blasco', '6789'),
+  ('luismartinez.12@gmail.com', 'Luis', '1234'),
+  ('mariadeveloper@gymapp.com', 'Maria', '6789'),
+  ('claudiamateo@gmail.com', 'Claudia', '6789'),
+  ('esteban_89@gmail.com', 'Esteban', '1234'),
+  ('lupombo@gmail.com', 'Lucía', '6789');
 `);
 
     //Inserción de actividades

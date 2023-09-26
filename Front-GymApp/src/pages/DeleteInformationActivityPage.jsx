@@ -1,16 +1,7 @@
+import '../Css/DeleteInformationActivityPage.css';
+import { useState } from 'react';
+
 export const DeleteInformationActivityPage = () => {
-    return (
-    <section> 
-    <h1> Delete Page </h1>
-    <p>  Se mostrará un comunicado confirmando si desea elimianr la actividad seleccionada </p> 
-    </section>
-    );
-    };
-
-    import React, { useState } from 'react';
-    import 'Css/DeleteInformationActivityPage.css';
-
-function App() {
   const [publicaciones, setPublicaciones] = useState([
     
   ]);
@@ -51,5 +42,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

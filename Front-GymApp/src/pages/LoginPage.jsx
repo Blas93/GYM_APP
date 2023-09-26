@@ -1,12 +1,14 @@
+import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { loginUserServices } from "../services";
+import { useNavigate } from "react-router-dom";
 
 export const LoginPage = () => {
     const [email, setEmail]= useState("");
     const [password, setPassword]=useState("");
     const [error, setError] = useState("");
     const { login } = useContext(AuthContext)
-    const navigate = useNavigate ();
+    const navigate = useNavigate();
 
     const handleForm =async (e) =>{
         e.preventDefault();

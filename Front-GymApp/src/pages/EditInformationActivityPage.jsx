@@ -1,16 +1,7 @@
+import { useState } from 'react';
+import '../Css/EditInformationActivityPage.css'
+
 export const EditInformationActivityPage = () => {
-    return (
-    <section> 
-    <h1> Editar contenido </h1>
-    <p> Se mostrará los campos de la actividad en formato editable </p> 
-    </section>
-    );
-    };
-
-    import React, { useState } from 'react';
-    import 'Css/EditInformationActivityPage.css'
-
-function App() {
   const [publicaciones, setPublicaciones] = useState([
     
   ]);
@@ -61,5 +52,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

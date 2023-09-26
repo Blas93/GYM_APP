@@ -1,39 +1,47 @@
-import { createContext } from "react"; 
+import { createContext, useEffect, useState } from "react"; 
+import { getUserDataService } from "../services";
 
 export const AuthContext = createContext();
+export const AuthUpdateContext = createContext(() => {
+    //No hace nada
+});
+  
 
-export const AuthProviderComponent = ({children}) => {
-const [token, setToken] = useState (localStorage.getItem("token")); 
-const [user, setUser]= useState(null);
+export const AuthProviderComponent = ({ children }) => {
+    const [token, setToken] = useState (localStorage.getItem("token")); 
+    const [user, setUser]= useState(null);
 
-useEffect(()=>{
-    localStorage.setItem("token", token);
-}, [token]);
+    const login = (token) => {
+        setToken(token);
+    };
+
+    const logout = ()=> {
+    setToken('');
+    setUser(null)
+    };
+
+    //Guardar el token en el localStorage
+    useEffect(()=>{
+        localStorage.setItem("token", token);
+    }, [token]);
 
 
-//Información del usuario logado 
-useEffect(()=>{
-const getUserData =async () =>{
-    try{
-        const data= await getUserDataService({token})
-        setUser (data);
-    }catch (error){
+    //Información del usuario logado 
+    useEffect(()=>{
+        const getUserData =async () =>{
+            try{
+                const data= await getUserDataService({token})
+                setUser (data);
+            }catch (error){
+                logout()
+            }
+        }
+        if(token) getUserData()
+    }, [token])
 
-    }
-}
-if(token) getUserData()
-}, [token])
 
-const login = (token) => {
-    setToken(token);
-};
 
-constlogout = ()=> {
-setToken('');
-setUser(null)
-};
-
-return (
+    return (
         <AuthContext.Provider value= {{token, user, login, logout }}>
             {children}
         </AuthContext.Provider>

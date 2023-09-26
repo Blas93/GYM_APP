@@ -1,17 +1,6 @@
+import '../Css/RegisterPage.css'
+import { useState } from 'react';
 export const RegisterPage = () => {
-    return (
-    <section> 
-    <h1> Registre </h1>
-    <p> Se mostrará el formulario de registro para nuevos usuarios </p> 
-    </section>
-    );
-    };
-
-
-    import 'Css/RegisterPage.css'
-    import React, { useState } from 'react';
-
-function RegistroUsuario() {
   const [usuario, setUsuario] = useState({
     nombre: '',
     direccion: '',
@@ -45,7 +34,7 @@ function RegistroUsuario() {
     <div>
       <h1>Registro de Usuario</h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <fieldset>
           <label htmlFor="nombre">Nombre:</label>
           <input
             type="text"
@@ -55,8 +44,8 @@ function RegistroUsuario() {
             onChange={handleChange}
             required
           />
-        </div>
-        <div>
+        </fieldset>
+        <fieldset>
           <label htmlFor="direccion">Dirección:</label>
           <input
             type="text"
@@ -66,7 +55,7 @@ function RegistroUsuario() {
             onChange={handleChange}
             required
           />
-        </div>
+        </fieldset>
         <div>
           <label htmlFor="correoElectronico">Correo Electrónico:</label>
           <input
@@ -94,5 +83,3 @@ function RegistroUsuario() {
     </div>
   );
 }
-
-export default RegistroUsuario;

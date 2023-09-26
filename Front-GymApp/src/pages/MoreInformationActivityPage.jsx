@@ -1,6 +1,6 @@
 import {useParams} from "react-router-dom";
-import {ErrorMessage} from "../components/ErrorMessage";
 import activityDefinition from "../hooks/activityDefinition";
+import { ErrorMessage } from "../componentes/ErrorMessage";
 
 export const MoreInformationActivityPage = () => {
     const {id} = useParams();

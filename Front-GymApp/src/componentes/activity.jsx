@@ -1,17 +1,15 @@
-import {link} from "react-router-dom";
-
-export const activity = ({ activity}) => {
+export const Activity = ({ activity}) => {
     return (
         <article>
             <p>{activity.text}</p>
 
             {activity.image ? (
                 <img
-                src= {`${process.env.REACT_APP_BACKEND}/uploads/${activity.image}`}
+                src= {`${import.meta.env.VITE_APP_BACKEND}/uploads/${activity.image}`}
                 alt={activity.text}
                 />
             ) : null}
             
         </article>
     );
-            };
+};

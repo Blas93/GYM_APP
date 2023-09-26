@@ -27,6 +27,21 @@ export const loginUserServices = async (email, password)=> {
 
     return json.data; 
 }
+// Añadir REgistro de usuarios
+
+export const registerUserService = async (user)=> { 
+    const response = await fetch (`${import.meta.env.VITE_APP_BACKEND}/user`,{
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user)
+    });
+    const json = await response.json();
+    if(!response.ok) {
+        throw new Error (json.message);
+    }
+}
 
 export const getUserDataService = async ({token}) => {
     const response = await fetch (`${import.meta.env.VITE_APP_BACKEND}/User`, {

@@ -1,1 +1,6 @@
-/*Poner los datos de CSS de los elementos comunes, ej. el tamaño del header y del footer*/
+/*Poner los datos de CSS de los elementos comunes, ej. el tamaño del header y del footer*//* Estilo para el encabezado (header) */
+header {
+    background-color: #ffa500;
+    color: #551a8b;
+    /*padding: 10px 300px;*/
+}

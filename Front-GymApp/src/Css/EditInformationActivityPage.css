@@ -1,5 +1,5 @@
 /* Estilos para el contenedor principal */
-div {
+/*div {
     text-align: center;
     max-width: 400px;
     margin: 0 auto;
@@ -10,12 +10,12 @@ div {
   }
   
   /* Estilos para el título */
-  h1 {
+  /*h1 {
     color: #333;
   }
   
   /* Estilos para la lista de publicaciones */
-  ul {
+  /*ul {
     list-style: none;
     padding: 0;
   }
@@ -32,7 +32,7 @@ div {
   }
   
   /* Estilos para el botón Editar */
-  button#editar-publicacion {
+  /*button#editar-publicacion {
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -48,7 +48,7 @@ div {
   }
   
   /* Estilos para el campo de entrada de edición */
-  input[type="text"] {
+  /*input[type="text"] {
     width: 100%;
     padding: 5px;
     border: 1px solid #ccc;
@@ -56,7 +56,7 @@ div {
   }
   
   /* Estilos para el botón Guardar */
-  button#guardar-publicacion {
+  /*button#guardar-publicacion {
     background-color: #28a745;
     color: #fff;
     border: none;

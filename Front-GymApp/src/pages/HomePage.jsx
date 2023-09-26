@@ -3,15 +3,6 @@ export const HomePage = () => {
     //El formulario meterlo en un componente Filter.jsx
     return (
         <>
-            <header>
-                <nav>
-                    <ul>
-                        <li><a href="index.html"></a></li>
-                        <li><a href="tabla.html">Tabla Ejercicios</a></li>
-                        <li></li>
-                    </ul>
-                </nav>
-            </header>
             <form method="get" >
                 <label htmlFor="grupoMuscular">Grupo Muscular:</label>
                 <select name="grupoMuscular" id="grupoMuscular">

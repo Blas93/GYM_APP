@@ -3,4 +3,16 @@ header {
     background-color: #ffa500;
     color: #551a8b;
     /*padding: 10px 300px;*/
+    
+}
+header a {
+    text-decoration: none;
+}
+.logo{
+    height: 5rem;
+}
+footer{
+    background-color: rgb(50, 49, 49);
+    color: white;
+    align-content: center;
 }

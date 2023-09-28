@@ -30,6 +30,7 @@ export const loginUserServices = async (email, password)=> {
 // Añadir REgistro de usuarios
 
 export const registerUserService = async (user)=> { 
+    console.log(`${import.meta.env.VITE_APP_BACKEND}`)
     const response = await fetch (`${import.meta.env.VITE_APP_BACKEND}/user`,{
         method: 'POST',
         headers: {

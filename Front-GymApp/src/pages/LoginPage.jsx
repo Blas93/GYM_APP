@@ -10,12 +10,12 @@ export const LoginPage = () => {
     const { login } = useContext(AuthContext)
     const navigate = useNavigate();
 
-    const handleForm =async (e) =>{
+    const handleSubmit =async (e) =>{
         e.preventDefault();
         try {
-            const data = await loginUserServices ({email, password});
+            const data = await loginUserServices (email, password);
             login(data);
-            navigate("/activities/:id");
+            navigate("/home");
         } catch (error) {
             setError(error.message);
         }
@@ -24,7 +24,7 @@ export const LoginPage = () => {
     return (
     <section> 
     <h1> Login Page </h1> 
-    <form onSubmit={handleForm}>
+    <form onSubmit={handleSubmit}>
         <fieldset>
             <label htmlFor ="email">Email</label>
             <input 

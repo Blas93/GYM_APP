@@ -1,16 +1,16 @@
+import { useEffect, useState } from "react";
 import { getSigleActivityService } from "../services";
 
-const activityDefinition = (id)=> {
+const useActivity = (id)=> {
 const [activity, setActivity] = useState (null);
 const [loading, setLoading] = useState (true);
-const [error, setError] = useState ("");
+const [error, setError] = useState("");
 
-useEffect (() => {
+useEffect(() => {
 const loadactivity =async () => {
     try {
-        setloading(true);
+        setLoading(true);
 
-        
         const data = await getSigleActivityService (id);
         setActivity (data);
     } catch (error) {
@@ -28,4 +28,4 @@ return {activity, loading, error};
 };
 
 
-export default activityDefinition;
+export default useActivity;

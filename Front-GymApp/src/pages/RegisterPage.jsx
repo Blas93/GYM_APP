@@ -1,13 +1,15 @@
+import { useNavigate } from 'react-router-dom';
 import '../Css/RegisterPage.css'
 import { useState } from 'react';
+import { registerUserService } from '../services';
 export const RegisterPage = () => {
   const [usuario, setUsuario] = useState({
-    nombre: '',
-    direccion: '',
-    correoElectronico: '',
-    telefono: '',
+    name: '',
+    email: '',
+    password: '',
   });
-
+  const [error, setError] = useState(null)
+  const navigate = useNavigate()
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUsuario({
@@ -15,71 +17,65 @@ export const RegisterPage = () => {
       [name]: value,
     });
   };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Aquí puedes agregar el codigo para enviar los datos del usuario al servidor
-    // o realizar cualquier otra acción que necesites.
-    console.log('Usuario registrado:', usuario);
-    // Luego, puedes reiniciar el estado para borrar los campos del formulario.
-    setUsuario({
-      nombre: '',
-      direccion: '',
-      correoElectronico: '',
-      telefono: '',
-    });
+    try{
+      await registerUserService(usuario)
+      navigate('/login')
+    } catch (error){
+      setError(error.message)
+    } finally {
+      // o realizar cualquier otra acción que necesites.
+      console.log('Usuario registrado:', usuario);
+      // Luego, puedes reiniciar el estado para borrar los campos del formulario.
+      setUsuario({
+        name: '',
+        email: '',
+        password: '',
+      });
+    }
   };
-
   return (
     <div>
       <h1>Registro de Usuario</h1>
       <form onSubmit={handleSubmit}>
-        <fieldset>
-          <label htmlFor="nombre">Nombre:</label>
+        <label>
+          Nombre:
           <input
             type="text"
-            id="nombre"
-            name="nombre"
-            value={usuario.nombre}
+            id="name"
+            name="name"
+            value={usuario.name}
             onChange={handleChange}
             required
           />
-        </fieldset>
-        <fieldset>
-          <label htmlFor="direccion">Dirección:</label>
-          <input
-            type="text"
-            id="direccion"
-            name="direccion"
-            value={usuario.direccion}
-            onChange={handleChange}
-            required
-          />
-        </fieldset>
-        <div>
-          <label htmlFor="correoElectronico">Correo Electrónico:</label>
+        </label>
+        <label>
+          Correo Electrónico:
           <input
             type="email"
-            id="correoElectronico"
-            name="correoElectronico"
-            value={usuario.correoElectronico}
+            id="email"
+            name="email"
+            value={usuario.email}
             onChange={handleChange}
             required
           />
-        </div>
-        <div>
-          <label htmlFor="telefono">Número de Teléfono:</label>
+        </label>
+        <label>
+          Contraseña:
           <input
-            type="tel"
-            id="telefono"
-            name="telefono"
-            value={usuario.telefono}
+            type="password"
+            id="password"
+            name="password"
+            value={usuario.password}
             onChange={handleChange}
             required
           />
-        </div>
+        </label>
         <button type="submit">Registrar Usuario</button>
       </form>
+      {error && <p>{error}</p> }
     </div>
   );
 }

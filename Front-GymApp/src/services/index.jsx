@@ -1,4 +1,13 @@
+//conexión con el servidor para traer la información de las actividades
+export const getAllActivitiesServices = async () => {
+    const response = await fetch(`${import.meta.env.VITE_APP_BACKEND}/activities`)
 
+    const json = await response.json();
+    if (!response.ok){
+    throw new Error (json.message);
+    }
+    return json.data;
+};
 
 //conexión con el servidor para traer la información de la actividad
 export const getSigleActivityService = async (id) => {

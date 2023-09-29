@@ -1,0 +1,67 @@
+/* Estilos para el contenedor principal */
+section {
+    text-align: center;
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario horizontalmente */
+    padding: 20px; /* Espaciado interno del formulario */
+    background-color: #f5f5f5; /* Color de fondo */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  /* Estilos para el formulario */
+  form {
+    max-width: 400px; /* Ancho máximo del formulario */
+    width: 100%; /* Ancho del 100% del contenedor */
+    padding: 20px; /* Espaciado interno del formulario */
+    background-color: #fff; /* Color de fondo */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  /* Estilos para el título */
+  h1 {
+    text-align: center; /* Centrar el título horizontalmente */
+    color: #333; /* Color del texto del título */
+    margin-bottom: 20px; /* Espaciado inferior del título */
+  }
+  
+  /* Estilos para los campos de entrada y etiquetas */
+  label {
+    display: block; /* Muestra cada etiqueta en una línea separada */
+    margin-bottom: 10px; /* Espaciado inferior entre etiquetas */
+    font-weight: bold; /* Texto en negrita para etiquetas */
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: 100%; /* Ocupa el ancho completo del formulario */
+    padding: 10px; /* Espaciado interno de los campos de entrada */
+    margin-bottom: 10px; /* Espaciado inferior entre campos de entrada */
+    border: 1px solid #ccc; /* Borde de los campos de entrada */
+    border-radius: 5px; /* Borde redondeado */
+  }
+  
+  /* Estilos para el botón de inicio de sesión */
+  button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Elimina el borde del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Borde redondeado del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición de color de fondo */
+    width: 100%; /* Ocupa el ancho completo del formulario */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar sobre el botón */
+  }
+  
+  /* Estilos para el mensaje de error */
+  p {
+    color: #ff0000; /* Color rojo para el mensaje de error */
+    font-weight: bold; /* Texto en negrita para el mensaje de error */
+    margin-top: 10px; /* Espaciado superior del mensaje de error */
+  }
+  

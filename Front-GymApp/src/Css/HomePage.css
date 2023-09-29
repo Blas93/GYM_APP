@@ -1,96 +1,39 @@
-/* Reset de estilos para eliminar márgenes y rellenos predeterminados */
-/*body, p, form, input, select {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-/* Estilo para el cuerpo de la página */
-/*body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-}
-
-/* Estilo para el encabezado y la navegación */
-/*header {
-    background-color: orange;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-/* Estilo para el formulario de filtro */
-/*form {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button[id="buscar"] {
-    background-color:blue;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-/* Estilo para la página de inicio */
-/*.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilo para los resultados */
-/*.actividad {
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-}
-
-.actividad img {
-    max-width: 100%;
-    height: auto;
-}
-
-.actividad h3 {
-    font-size: 1.4rem;
-    margin-top: 10px;
-    color: #007bff;
-}
-
-.actividad p {
-    margin-top: 10px;
-}
-
-/* Estilo para los resultados vacíos */
-/*.sin-resultados {
-    text-align: center;
-    color: #777;
-    font-style: italic;
-}
+/* Estilos para el componente Filter */
+.Filter {
+    background-color: #f5f5f5; /* Color de fondo del Filter */
+    padding: 10px; /* Espaciado interno del Filter */
+    border-radius: 5px; /* Borde redondeado */
+    margin-bottom: 20px; /* Espaciado inferior del Filter */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  }
+  
+  /* Estilos para el componente ActivitiesList */
+  .ActivitiesList {
+    background-color: #fff; /* Color de fondo de ActivitiesList */
+    padding: 20px; /* Espaciado interno de ActivitiesList */
+    border-radius: 5px; /* Borde redondeado */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  }
+  
+  /* Estilos para los botones en Filter (ajusta según tus necesidades) */
+  .Filter button {
+    background-color: #007bff; /* Color de fondo del botón en Filter */
+    color: #fff; /* Color del texto del botón en Filter */
+    border: none; /* Elimina el borde del botón en Filter */
+    padding: 10px 20px; /* Espaciado interno del botón en Filter */
+    border-radius: 5px; /* Borde redondeado del botón en Filter */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón en Filter */
+    margin-right: 10px; /* Espaciado a la derecha de los botones en Filter */
+    transition: background-color 0.3s ease; /* Transición de color de fondo en Filter */
+  }
+  
+  .Filter button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar sobre el botón en Filter */
+  }
+  
+  /* Estilos para los elementos en ActivitiesList (ajusta según tus necesidades) */
+  .ActivitiesList p {
+    font-size: 16px; /* Tamaño de fuente de los elementos en ActivitiesList */
+    margin-bottom: 10px; /* Espaciado inferior de los elementos en ActivitiesList */
+  }
+  

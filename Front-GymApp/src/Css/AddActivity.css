@@ -1,53 +1,12 @@
-/* Estilos para el contenedor principal */
-/*div {
-    text-align: center;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+#agregar {
+    background-color: blue; /* Color de fondo del botón de eliminar por ID */
+  color: #fff; /* Color del texto del botón de eliminar por ID */
+  border: none; /* Elimina el borde del botón de eliminar por ID */
+  padding: 5px 10px; /* Espaciado interno del botón de eliminar por ID */
+  border-radius: 5px; /* Borde redondeado del botón de eliminar por ID */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón de eliminar por ID */
+  transition: background-color 0.3s ease; /* Transición de color de fondo */
+}
+#agregar:hover {
+    background-color: #0056b3; /* Color de fondo al pasar sobre el botón */
   }
-  
-  /* Estilos para el título */
-  /*h1 {
-    color: #333;
-  }
-  
-  /* Estilos para los campos de entrada y el botón */
-  /*input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Estilos para la lista de actividades */
-  /*ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    background-color: #fff;
-    padding: 5px;
-    border: 1px solid #ccc;
-    margin-bottom: 5px;
-    border-radius: 5px;
-  }
-  

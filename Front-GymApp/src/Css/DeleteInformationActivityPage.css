@@ -1,75 +1,44 @@
-/* Estilos para el contenedor principal */
-/*div {
-    text-align: center;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Estilos para el título */
-  /*h1 {
-    color: #333;
-  }
-  
-  /* Estilos para la lista de publicaciones */
-  /*ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    background-color: #fff;
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  button {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #c82333;
-  }
-  
-  /* Estilos para el campo de entrada y botón de eliminación */
-  /*label {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  input[type="text"] {
-    width: 100px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  /* Estilos para el botón de eliminación individual */
-  /*button#eliminar-publicacion {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button#eliminar-publicacion:hover {
-    background-color: #c82333;
-  }
-  
+/* Estilos para el botón de eliminar en la lista de publicaciones */
+ul li button {
+  background-color: blue; /* Color de fondo del botón de eliminar */
+  color: #fff; /* Color del texto del botón de eliminar */
+  border: none; /* Elimina el borde del botón de eliminar */
+  padding: 5px 10px; /* Espaciado interno del botón de eliminar */
+  border-radius: 5px; /* Borde redondeado del botón de eliminar */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón de eliminar */
+  transition: background-color 0.3s ease; /* Transición de color de fondo */
+
+  /* Estilos adicionales si es necesario */
+  font-size: 14px; /* Tamaño de fuente del botón de eliminar */
+  margin-left: 10px; /* Espaciado izquierdo del botón de eliminar */
+}
+
+ul li button:hover {
+  background-color: blue; /* Color de fondo al pasar sobre el botón de eliminar */
+}
+
+/* Estilos para el botón de eliminar por ID */
+div label {
+  font-weight: bold; /* Texto en negrita para la etiqueta del ID */
+}
+
+div input {
+  margin-right: 10px; /* Espaciado derecho del campo de entrada */
+}
+
+div button {
+  background-color: blue; /* Color de fondo del botón de eliminar por ID */
+  color: #fff; /* Color del texto del botón de eliminar por ID */
+  border: none; /* Elimina el borde del botón de eliminar por ID */
+  padding: 5px 10px; /* Espaciado interno del botón de eliminar por ID */
+  border-radius: 5px; /* Borde redondeado del botón de eliminar por ID */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón de eliminar por ID */
+  transition: background-color 0.3s ease; /* Transición de color de fondo */
+
+  /* Estilos adicionales si es necesario */
+  font-size: 14px; /* Tamaño de fuente del botón de eliminar por ID */
+}
+
+div button:hover {
+  background-color:blue; /* Color de fondo al pasar sobre el botón de eliminar por ID */
+}

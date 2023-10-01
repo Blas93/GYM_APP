@@ -15,7 +15,7 @@ import { DeleteInformationActivityPage } from "./pages/DeleteInformationActivity
 import { AuthProviderComponent } from "./context/AuthContext.jsx";
 import '../src/App.css'
 import { Footer } from "./componentes/Footer.jsx";
-//import { Footer } from "./componentes/Footer.jsx";
+
 
 
 function App() {

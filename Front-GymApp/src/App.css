@@ -11,34 +11,38 @@ header {
     color: #000000;
     width: 100vh;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 1rem 1rem;
-    border-bottom: 0.1rem solid;
-    box-shadow: 0 0 1.2rem;
-    transition: opacity 2s linear; 
+    padding: 1rem 1rem;    
 }
 main{
     overflow-x: hidden;
     margin-bottom: 5rem;
 }
 .logo{
+    display: flex;
+    align-items: center;
     height: 0.2rem;
     width: 0.2rem;
     overflow: hidden;
     background-color: #E1E1E1;
+    color: #000000;
+}
+.logo-img{
+    background-image: url(logo/logo.png);
+}
+h2{
+    color: #000000;
 }
 h3{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 h4{
-    color: #fff;
+    color: #000;
 }
 
-.footer-main{
-    display: inline;
-    background-color: ;
-    font-style: normal;
-    overflow-x: hidden;
-    background-color: grey;
-    padding: 2rem;
-    width: 100vh;
+nav a{
+    padding-right:0.2rem;
+}
+/*hacer que al poner el cursor sobre el link se cambie el color de fondo*/
+nav a:hover{
+    background-color: white;
 }

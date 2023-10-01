@@ -5,6 +5,7 @@
 }
 #root{
   height: 100vh;
+  width: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,8 +40,15 @@ main{
 a{
   color:#000
 }
+
+.footer-main{
+  display: inline;
+  background-color: #332f2c;
+  font-style: normal;
+  overflow-x: hidden;
+  padding: 2rem;
+  width: 100vh;
+}
 footer{
-  background: grey;
   color: white;
-  height: 5 rem;
 }

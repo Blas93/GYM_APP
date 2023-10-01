@@ -1,22 +1,24 @@
 import { Link } from "react-router-dom"; 
 import { Auth } from "./Auth"; 
-import logo from '../logo/GymApp.png'
+
+
+
+<logo />
 export const Header = () => {
     return (
         <header>
             
-            <h1>
             <div className="logo">
-                <a href ="/">
-                    <img id="logo-img"src={logo} alt="Logo"/>
-                </a>
-            </div> 
-            </h1>
-            <div>
+                <a href ="/" className="logo-img">
+                    <img src="logo.png" alt="Logo de la aplicación"/>
+                </a>  
+            <h2 className="logo-nombre">
             <Link to ="/">
                     Gym App
-                </Link>
+            </Link>
+            </h2>
             </div>
+           
             
             <nav>
                 <Auth/>

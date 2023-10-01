@@ -1,4 +1,6 @@
-
+.titulo-principal{
+    padding: 2rem;
+}
 .eslogan{
     color: #000;
 }
@@ -11,7 +13,9 @@ background-image: url(../imageneshomepublic/cuandoquieras.png);
 background-repeat: no-repeat;
 background-position: center;
 background-attachment: fixed;
-background-size: cover;
+background-size: contain;
+background-repeat: no-repeat;
+margin: 1rem;
 }
 #label-donde{
     background-image: url(../imageneshomepublic/dondequieras.png);
@@ -19,6 +23,8 @@ background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    background-repeat: no-repeat;
+    margin: 1rem;
 }
 #label-como{
         background-image: url(../imageneshomepublic/comoquieras.png);
@@ -26,15 +32,28 @@ background-size: cover;
         background-position: center;
         background-attachment: fixed;
         background-size: cover;
+        background-repeat: no-repeat;
+        margin: 1rem;
+}
+span{
+    display: block;
 }
 /*formato del texto de las tres etiquetas:*/
 .text-white{
-    color: #fff;
+    color: #000;
 }
 h3{
     font-weight: bold;
 }
 .text-white-outliner{
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px #000;
     color: transparent;
+}
+fieldset{
+    border-radius: 0.5rem;
+    padding:  1rem;
+    height: 350px;
+    width: 350px;
+    flex-flow: wrap;
+    justify-content: flex-end;
 }

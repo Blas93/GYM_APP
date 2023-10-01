@@ -1,8 +1,8 @@
-/*import React from 'react'*/
+import React from 'react'
 import { Activity } from './Activity'
 import { AddActivity } from '../pages/AddActivity'
 import { DeleteInformationActivityPage } from '../pages/DeleteInformationActivityPage'
-import {EditInformationActivityPage } from '../pages/EditInformationActivityPage'
+import { EditInformationActivityPage } from '../pages/EditInformationActivityPage'
 
 export const ActivitiesList = ({activities}) => {
   return (
@@ -25,5 +25,5 @@ export const ActivitiesList = ({activities}) => {
           <p>No hay ninguna actividad todavía</p>
         )}
     </section>
-  )
-}
+  );
+};

@@ -1,18 +1,44 @@
 /*Poner los datos de CSS de los elementos comunes, ej. el tamaño del header y del footer*//* Estilo para el encabezado (header) */
 header {
-    background-color: #ffa500;
-    color: #551a8b;
-    /*padding: 10px 300px;*/
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    opacity: 1;
+    top: 0;
+    z-index: 5;
+    background-color: #E1E1E1;
+    color: #000000;
+    width: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 1rem 1rem;
+    border-bottom: 0.1rem solid;
+    box-shadow: 0 0 1.2rem;
+    transition: opacity 2s linear; 
 }
-header a {
-    text-decoration: none;
+main{
+    overflow-x: hidden;
+    margin-bottom: 5rem;
 }
 .logo{
-    height: 5rem;
+    height: 0.2rem;
+    width: 0.2rem;
+    overflow: hidden;
+    background-color: #E1E1E1;
 }
-footer{
-    background-color: rgb(50, 49, 49);
-    color: white;
-    align-content: center;
+h3{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h4{
+    color: #fff;
+}
+
+.footer-main{
+    display: inline;
+    background-color: ;
+    font-style: normal;
+    overflow-x: hidden;
+    background-color: grey;
+    padding: 2rem;
+    width: 100vh;
 }

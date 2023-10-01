@@ -4,14 +4,20 @@ import logo from '../logo/GymApp.png'
 export const Header = () => {
     return (
         <header>
+            
             <h1>
-                <Link to ="/">
-                    <img src={logo} alt="Logo" className="logo"/>
+            <div className="logo">
+                <a href ="/">
+                    <img id="logo-img"src={logo} alt="Logo"/>
+                </a>
+            </div> 
+            </h1>
+            <div>
+            <Link to ="/">
                     Gym App
                 </Link>
+            </div>
             
-            </h1>
-
             <nav>
                 <Auth/>
             </nav>

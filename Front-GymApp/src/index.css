@@ -10,6 +10,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  background-color: white;
 }
 header{
  height: 5rem;
@@ -27,7 +28,7 @@ ul li{
   border-radius: 0.5rem;
 }
 ul li a:hover{
-color: blueviolet;
+color: #000;
 }
 
 
@@ -35,7 +36,9 @@ main{
   height: calc(100%-10rem);
 }
 
-
+a{
+  color:#000
+}
 footer{
   background: grey;
   color: white;

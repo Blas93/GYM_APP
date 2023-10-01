@@ -12,12 +12,12 @@ export const Auth = () => {
     
 </p>
     ):( 
-        <ul>
-            <li>
-                <Link to = "/register"> Register</Link>
+        <ul className="nav">
+            <li className="list-link">
+                <Link to = "/register" id="r-link" className="link"> Register</Link>
             </li>
-            <li>
-                <Link to = "/login">Login</Link>
+            <li className="list-link">
+                <Link to = "/login"id="l-link" className="link">Login</Link>
             </li>
         </ul>
     );

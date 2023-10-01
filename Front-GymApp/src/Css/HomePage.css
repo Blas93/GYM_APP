@@ -17,7 +17,7 @@
   
   /* Estilos para los botones en Filter (ajusta según tus necesidades) */
   .Filter button {
-    background-color: #007bff; /* Color de fondo del botón en Filter */
+    background-color: #000; /* Color de fondo del botón en Filter */
     color: #fff; /* Color del texto del botón en Filter */
     border: none; /* Elimina el borde del botón en Filter */
     padding: 10px 20px; /* Espaciado interno del botón en Filter */
@@ -28,7 +28,7 @@
   }
   
   .Filter button:hover {
-    background-color: #0056b3; /* Color de fondo al pasar sobre el botón en Filter */
+    color: yellow; /* Color de fondo al pasar sobre el botón en Filter */
   }
   
   /* Estilos para los elementos en ActivitiesList (ajusta según tus necesidades) */

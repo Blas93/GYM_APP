@@ -1,0 +1,40 @@
+
+.eslogan{
+    color: #000;
+}
+.gratuito{
+    color:#FFDE59;
+}
+/*Imágenes correspondientes a las tres etiquetas:*/
+#label-cuando{
+background-image: url(../imageneshomepublic/cuandoquieras.png);
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+background-size: cover;
+}
+#label-donde{
+    background-image: url(../imageneshomepublic/dondequieras.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#label-como{
+        background-image: url(../imageneshomepublic/comoquieras.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+}
+/*formato del texto de las tres etiquetas:*/
+.text-white{
+    color: #fff;
+}
+h3{
+    font-weight: bold;
+}
+.text-white-outliner{
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}

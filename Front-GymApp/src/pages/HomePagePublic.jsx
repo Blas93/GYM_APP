@@ -9,6 +9,8 @@ export const HomePagePublic = () => {
     <p className='eslogan'>Podrás organizar tu plan de entrenamiento de forma personalizada y completamente</p>
     <p className='gratuito'>GRATUITO</p>
 
+    
+
   
     <fieldset id='label-cuando'>
     <h3>

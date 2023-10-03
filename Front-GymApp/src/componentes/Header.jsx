@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom"; 
-import { Auth } from "./Auth"; 
-
 
 
 <logo />
@@ -21,7 +19,15 @@ export const Header = () => {
            
             
             <nav>
-                <Auth/>
+            <ul className="nav">
+            <li className="list-link">
+                <Link to = "/register" id="r-link" className="link"> Register</Link>
+            </li>
+            <li className="list-link">
+                <Link to = "/login"id="l-link" className="link">Login</Link>
+        
+            </li>
+        </ul>
             </nav>
         </header>
     )

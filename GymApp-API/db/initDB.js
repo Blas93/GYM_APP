@@ -12,7 +12,7 @@ async function initDB() {
     console.log('Creando tablas)');
     await connection.query(`CREATE TABLE user(
             id INTEGER PRIMARY KEY AUTO_INCREMENT,
-            email VARCHAR(100)  NOT NULL,
+            email VARCHAR(100)   NOT NULL,
             user_name VARCHAR(100)  NOT NULL,
             password VARCHAR(100) NOT NULL,
             role ENUM("client", "administrator") DEFAULT "client",

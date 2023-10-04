@@ -26,12 +26,12 @@ export const DeleteInformationActivityPage = () => {
         {publicaciones.map((publicacion) => (
           <li key={publicacion.id}>
             {publicacion.contenido}
-            <button onClick={() => setIdEliminar(publicacion.id)}>Eliminar</button>
+            
           </li>
         ))}
       </ul>
       <div>
-        <label>Id de publicación a eliminar: </label>
+        
         <input
           type="text"
           value={idEliminar}

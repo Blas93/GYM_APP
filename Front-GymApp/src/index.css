@@ -36,9 +36,12 @@ color: #000;
 main{
   height: calc(100%-10rem);
 }
-
+/* formato de los links*/
 a{
-  color:#000
+  color:#000;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: flex;
 }
 
 .footer-main{

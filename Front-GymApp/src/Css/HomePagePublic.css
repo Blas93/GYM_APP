@@ -52,9 +52,10 @@ h3{
 fieldset{
     border-radius: 0.5rem;
     padding:  1rem;
-    margin: 0.5rem;
-    height: 7.5 rem;
+    margin: 1rem;
+    height: 7.5rem;
     width: 400px;
     flex-flow: wrap;
     justify-content: flex-end;
+    
 }

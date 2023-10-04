@@ -52,7 +52,11 @@ h3{
 fieldset{
     border-radius: 0.5rem;
     padding:  1rem;
+
+    margin: 1rem;
+
     margin: 0.5rem;
+
     height: 7.5 rem;
     width: 400px;
     flex-flow: wrap;

@@ -11,10 +11,10 @@ export const HomePagePublic = () => {
 
     
 
-  
+  <div>
     <fieldset id='label-cuando'>
     <h3>
-    <span className='text-white'>Cuando</span> 
+    <span className='text-white'>Cuándo</span> 
     <span className='text-white-outliner'>Tú quieras</span>
    
     </h3>
@@ -46,6 +46,7 @@ export const HomePagePublic = () => {
     entrena cómo más cómodo te sientas
       </h4>
     </fieldset>
+    </div>
     
 
   </section>

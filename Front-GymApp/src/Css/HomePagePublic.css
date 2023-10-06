@@ -12,41 +12,45 @@
 background-image: url(../imageneshomepublic/cuandoquieras.png);
 background-repeat: no-repeat;
 background-position: center;
-background-attachment: fixed;
-background-size: contain;
+background-attachment: inherit; /*es para mantener la imagen fija dentro del fieldset*/
+background-size: cover;
 background-repeat: no-repeat;
 margin: 1rem;
+text-align: right;
 }
 #label-donde{
     background-image: url(../imageneshomepublic/dondequieras.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment:inherit;/*es para mantener la imagen fija dentro del fieldset*/
     background-size: cover;
     background-repeat: no-repeat;
     margin: 1rem;
+    text-align: center;
 }
 #label-como{
         background-image: url(../imageneshomepublic/comoquieras.png);
         background-repeat: no-repeat;
         background-position: center;
-        background-attachment: fixed;
-        background-size: cover;
+        background-attachment: inherit;/*es para mantener la imagen fija dentro del fieldset*/
+        background-size:cover;
         background-repeat: no-repeat;
         margin: 1rem;
+        text-align: left;
 }
 span{
     display: block;
 }
 /*formato del texto de las tres etiquetas:*/
 .text-white{
-    color: #000;
+    color: white;
 }
 h3{
     font-weight: bold;
+    -webkit-text-stroke: 0.03rem black;
 }
 .text-white-outliner{
-    -webkit-text-stroke: 1px #000;
+    -webkit-text-stroke: 1px white; /*esta propiedad es para poder poner de color el borde de la letra*/
     color: transparent;
 }
 fieldset{
@@ -57,5 +61,14 @@ fieldset{
     width: 400px;
     flex-flow: wrap;
     justify-content: flex-end;
-    
+    align-content: center;
+    display:inline; /*coloca los bloques de la imágenes centrado*/
 }
+h4{
+    color: white;
+    -webkit-text-stroke: 0.03rem black;
+
+}
+p{
+   align-content: center;
+  }

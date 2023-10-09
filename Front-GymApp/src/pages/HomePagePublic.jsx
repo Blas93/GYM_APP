@@ -11,7 +11,7 @@ export const HomePagePublic = () => {
 
     
 
-  <div>
+  <div className='home-public-blocks'>
     <fieldset id='label-cuando'>
     <h3>
     <span className='text-white'>Cuándo</span> 

@@ -17,17 +17,9 @@ main{
     overflow-x: hidden;
     margin-bottom: 5rem;
 }
-.logo{
-    display: flex;
-    align-items: center;
-    height: 0.2rem;
-    width: 0.2rem;
-    overflow: hidden;
-    background-color: #E1E1E1;
-    color: #000000;
-}
 .logo-img{
-    background-image: url(logo/logo.png);
+    background-image: url(logo/logogymapp.png);
+    width: 10rem;
 }
 h2{
     color: #000000;
@@ -35,6 +27,7 @@ h2{
 h3{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
 
 nav a{
     padding-right:0.2rem;

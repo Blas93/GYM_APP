@@ -3,9 +3,13 @@
 }
 .eslogan{
     color: #000;
+    text-justify: inherit;
 }
 .gratuito{
     color:#FFDE59;
+    text-shadow: 0 0 30px #FFDE59;
+    padding: 0.5rem;
+    margin: 0.5rem;
 }
 /*Imágenes correspondientes a las tres etiquetas:*/
 #label-cuando{

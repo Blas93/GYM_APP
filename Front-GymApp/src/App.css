@@ -26,17 +26,19 @@ main{
     background-color: #E1E1E1;
     color: #000000;
 }
+main{
+    overflow-x: hidden;
+    margin-bottom: 5rem;
+}
 .logo-img{
     background-image: url(logo/logo.png);
+    width: 10rem;
 }
 h2{
     color: #000000;
 }
 h3{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-h4{
-    color: #000;
 }
 
 nav a{

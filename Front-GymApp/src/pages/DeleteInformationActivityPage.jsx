@@ -1,10 +1,8 @@
 import '../Css/DeleteInformationActivityPage.css';
 import { useState } from 'react';
 
-export const DeleteInformationActivityPage = () => {
-  const [publicaciones, setPublicaciones] = useState([
-    
-  ]);
+export const DeleteInformationActivityPage = ({publicacionesToDelete }) => {
+  const [publicaciones, setPublicaciones] = useState(publicacionesToDelete);
   const [idEliminar, setIdEliminar] = useState('');
 
   const eliminarPublicacion = () => {

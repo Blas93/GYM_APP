@@ -1,4 +1,21 @@
+import react, { useState } from 'react';
+
 export const Filter = () => {
+    
+    const [respuesta, setRespuesta] = useState('');
+
+    const handleFilter = async () => {
+        const grupoMuscular = document.getElementById('grupoMuscular').value;
+        const tipologia = document.getElementById('tipologia').value;
+
+        try{
+             response = await fetch(`/api/filtrar?grupoMuscular=${grupoMuscular}&tipologia=${tipologia}`);
+        const data = await response.json();
+        setRespuesta(data.resultado);
+    } catch (error) {
+        console.error('Error al enviar la solicitud:', error );
+    }
+};
     return(
         <form method="get" >
         <label htmlFor="grupoMuscular">Grupo Muscular:</label>
@@ -15,14 +32,14 @@ export const Filter = () => {
             <option value="pesas">Pesas</option>
         </select>
     
-        <button id="buscar">Filtrar</button>
+        <button id="buscar" onClick={handleFilter} >Filtrar</button>
         
-        <div id="respuesta">
+        <div id="respuesta">{respuesta}
 
         </div>
-    
-        <script src="http://localhost:3000//"></script>
-
+ 
     </form>  
     )
-}
+    };
+    
+    export default Filter;

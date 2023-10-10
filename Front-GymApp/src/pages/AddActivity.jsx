@@ -1,30 +1,37 @@
 import { useEffect, useState } from 'react';
 import '../Css/AddActivity.css';
+//import { useNavigate } from "react-router-dom";
 
 export const AddActivity = () => {
   const [actividades, setActividades] = useState([]);
-  const [nuevaActividad, setNuevaActividad] = useState('');
   const [nombre, setNombre] = useState('');
   const [descripcion, setDescripcion] = useState('');
   const [tipologia, setTipologia] = useState('');
   const [grupoMuscular, setGrupoMuscular] = useState('');
-  
-  
+ 
   const agregarActividad = () => {
-    if (nuevaActividad.trim() === '') {
+    if (nombre.trim() === '' || descripcion.trim() === '' || tipologia.trim() === '' || grupoMuscular.trim() === '' ) {
       return;
     }
 
-    setActividades([...actividades, nuevaActividad,]);
-    setNuevaActividad('');
-    setNombre('');
-    setDescripcion('');
-    setTipologia('');
-    setGrupoMuscular('');
+   const nuevaActividad ={
+    nombre,
+    descripcion,
+    tipologia,
+    grupoMuscular,
+   };
+
+   setActividades([...actividades, nuevaActividad,]);
+   setNombre('');
+  setDescripcion('');
+  setTipologia('');
+  setGrupoMuscular('');
+  
   };
 
   useEffect(() => {
     fetch('http://localhost3000/db/activities.js')
+    //si le añado los dos puntos al local host da pantalla en blanco, ¿porque sucede????
     .then((response) => response.json())
     .then((data) => {
       setActividades(data);
@@ -32,7 +39,7 @@ export const AddActivity = () => {
     .catch((error) => {
       console.error('Error al obtener datos:', error);
     });
-  },
+  }
   );
   
 

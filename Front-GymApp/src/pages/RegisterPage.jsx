@@ -43,39 +43,45 @@ export const RegisterPage = () => {
     <div>
       <h1>Registro de Usuario</h1>
       <form onSubmit={handleSubmit}>
+        <fieldset>
         <label>
           Nombre:
-          <input
+        <input
             type="text"
             id="name"
             name="name"
             value={usuario.name}
             onChange={handleChange}
             required
-          />
+        />
         </label>
+        </fieldset>
+        <fieldset>
         <label>
           Correo Electrónico:
-          <input
+        <input
             type="email"
             id="email"
             name="email"
             value={usuario.email}
             onChange={handleChange}
             required
-          />
+        />
         </label>
+        </fieldset>
+        <fieldset>
         <label>
           Contraseña:
-          <input
+         <input
             type="password"
             id="password"
             name="password"
             value={usuario.password}
             onChange={handleChange}
             required
-          />
+        />
         </label>
+        </fieldset>
         <button type="submit">Registrar Usuario</button>
       </form>
       {error && <p>{error}</p> }

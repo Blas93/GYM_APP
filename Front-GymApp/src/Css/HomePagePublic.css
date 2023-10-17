@@ -57,7 +57,7 @@ h3{
     -webkit-text-stroke: 1px white; /*esta propiedad es para poder poner de color el borde de la letra*/
     color: transparent;
 }
-fieldset{
+fieldset {
     border-radius: 0.5rem;
     padding:  1rem;
     margin: 1rem;

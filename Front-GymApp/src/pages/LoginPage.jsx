@@ -24,10 +24,10 @@ export const LoginPage = () => {
 
     return (
     <section> 
-    <h1> Login Page </h1> 
+    <h1> Acceso al área privada </h1> 
     <form onSubmit={handleSubmit}>
         <fieldset>
-            <label htmlFor ="email">Email</label>
+            <label htmlFor ="email">Email:</label>
             <input 
             type="email"
             id="email" 
@@ -36,7 +36,7 @@ export const LoginPage = () => {
             onChange={(e) => setEmail(e.target.value)} />
         </fieldset>
         <fieldset>
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Contraseña:</label>
         <input 
         type="password" 
         id="password" 
@@ -45,7 +45,7 @@ export const LoginPage = () => {
         onChange={(e) => setPassword(e.target.value)} />
         </fieldset>
 
-        <button>Login</button>
+        <button>Acceder</button>
         {error ? <p> {error} </p>:null} 
     </form>
     </section>

@@ -23,7 +23,7 @@ ul{
   list-style: none;
 }
 ul li{
-  display: block;
+  display:inline-flex; /*hace que se pongan los elementos de la lista en línea*/
   padding: 0.5rem 1rem;
   transition: all 0.4s linear;
   border-radius: 0.5rem;
@@ -44,6 +44,19 @@ a{
   display: flex;
 }
 
+/*formato al link de Registro*/
+.link-r{
+  background-color: yellow;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.link-l{
+  background-color: transparent;
+  border-color: 0.1 0.1 black;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
 .footer-main{
   display: inline;
   background-color: #332f2c;
@@ -55,3 +68,4 @@ a{
 footer{
   color: white;
 }
+

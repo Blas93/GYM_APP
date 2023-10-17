@@ -17,6 +17,14 @@ main{
     overflow-x: hidden;
     margin-bottom: 5rem;
 }
+
+.logo-img{
+    background-image: url(logo/logogymapp.png);
+    width: 10rem;
+}
+h1{
+    font-size: 16px;
+
 .logo{
     display: flex;
     align-items: center;
@@ -33,6 +41,7 @@ main{
 .logo-img{
     background-image: url(logo/logo.png);
     width: 10rem;
+
 }
 h2{
     color: #000000;
@@ -41,10 +50,29 @@ h3{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+
 nav a{
     padding-right:0.2rem;
 }
 /*hacer que al poner el cursor sobre el link se cambie el color de fondo*/
 nav a:hover{
     background-color: white;
+}
+
+/*formato del título de login y register*/
+/* Estilos para el título */
+h1 {
+    text-align: center; /* Centrar el título horizontalmente */
+    margin-bottom: 20px; /* Espaciado inferior del título */
+    color: #333; /* Color del texto del título */
+  }
+/*formato de los input de login y register*/
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%; /* Ocupa el ancho completo del formulario */
+  padding: 10px; /* Espaciado interno de los campos de entrada */
+  margin-bottom: 10px; /* Espaciado inferior entre campos de entrada */
+  border: 1px solid #ccc; /* Borde de los campos de entrada */
+  border-radius: 5px; /* Borde redondeado */
 }

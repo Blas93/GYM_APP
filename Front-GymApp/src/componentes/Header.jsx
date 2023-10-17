@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 export const Header = () => {
     return (
         <header>
-            
-            <div className="logo">
                 <a href ="/" className="logo-img">
                     <img src="logo.png" alt="Logo de la aplicación"/>
                 </a>  
@@ -15,16 +13,16 @@ export const Header = () => {
                     Gym App
             </Link>
             </h2>
-            </div>
+        
            
             
             <nav>
             <ul className="nav">
             <li className="list-link">
-                <Link to = "/register" id="r-link" className="link"> Register</Link>
+                <Link to = "/register" id="r-link" className="link-r"> Register</Link>
             </li>
             <li className="list-link">
-                <Link to = "/login"id="l-link" className="link">Login</Link>
+                <Link to = "/login"id="l-link" className="link-l">Login</Link>
         
             </li>
         </ul>

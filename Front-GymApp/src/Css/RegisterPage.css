@@ -9,28 +9,11 @@ div {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
-/* Estilos para el título */
-h1 {
-  text-align: center; /* Centrar el título horizontalmente */
-  margin-bottom: 20px; /* Espaciado inferior del título */
-  color: #333; /* Color del texto del título */
-}
-
 /* Estilos para los campos de entrada y etiquetas */
 label {
   display: block; /* Muestra cada etiqueta en una línea separada */
   margin-bottom: 10px; /* Espaciado inferior entre etiquetas */
   font-weight: bold; /* Texto en negrita para etiquetas */
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  width: 100%; /* Ocupa el ancho completo del formulario */
-  padding: 10px; /* Espaciado interno de los campos de entrada */
-  margin-bottom: 10px; /* Espaciado inferior entre campos de entrada */
-  border: 1px solid #ccc; /* Borde de los campos de entrada */
-  border-radius: 5px; /* Borde redondeado */
 }
 
 /* Estilos para el botón de registro */

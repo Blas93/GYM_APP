@@ -1,10 +1,8 @@
 import '../Css/DeleteInformationActivityPage.css';
 import { useState } from 'react';
 
-export const DeleteInformationActivityPage = () => {
-  const [publicaciones, setPublicaciones] = useState([
-    
-  ]);
+export const DeleteInformationActivityPage = ({publicacionesToDelete }) => {
+  const [publicaciones, setPublicaciones] = useState(publicacionesToDelete);
   const [idEliminar, setIdEliminar] = useState('');
 
   const eliminarPublicacion = () => {
@@ -26,12 +24,12 @@ export const DeleteInformationActivityPage = () => {
         {publicaciones.map((publicacion) => (
           <li key={publicacion.id}>
             {publicacion.contenido}
-            <button onClick={() => setIdEliminar(publicacion.id)}>Eliminar</button>
+            
           </li>
         ))}
       </ul>
       <div>
-        <label>Id de publicación a eliminar: </label>
+        
         <input
           type="text"
           value={idEliminar}

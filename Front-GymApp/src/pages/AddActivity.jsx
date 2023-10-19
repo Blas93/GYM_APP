@@ -1,84 +1,114 @@
-import { useEffect, useState } from 'react';
+import { useState, useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
+import upload from '../svg/upload-svgrepo-com.svg';
 import '../Css/AddActivity.css';
 //import { useNavigate } from "react-router-dom";
 
-export const AddActivity = () => {
-  const [actividades, setActividades] = useState([]);
-  const [nombre, setNombre] = useState('');
-  const [descripcion, setDescripcion] = useState('');
-  const [tipologia, setTipologia] = useState('');
-  const [grupoMuscular, setGrupoMuscular] = useState('');
- 
-  const agregarActividad = () => {
-    if (nombre.trim() === '' || descripcion.trim() === '' || tipologia.trim() === '' || grupoMuscular.trim() === '' ) {
-      return;
-    }
+export const AddActivity = ({ addActivity }) => {
+	const [nombre, setNombre] = useState('');
+	const [descripcion, setDescripcion] = useState('');
+	const [tipologia, setTipologia] = useState('');
+	const [grupoMuscular, setGrupoMuscular] = useState('');
+	const [image, setImage] = useState();
+	const [imagePreview, setImagePreview] = useState();
+	const [showAdd, setShowAdd] = useState(false);
 
-   const nuevaActividad ={
-    nombre,
-    descripcion,
-    tipologia,
-    grupoMuscular,
-   };
+	const [error, setError] = useState(null);
+	const [loading, setLoading] = useState(false);
 
-   setActividades([...actividades, nuevaActividad,]);
-   setNombre('');
-  setDescripcion('');
-  setTipologia('');
-  setGrupoMuscular('');
-  
-  };
+	const { token } = useContext(AuthContext);
 
-  useEffect(() => {
-    fetch('http://localhost3000/db/activities.js')
-    //si le añado los dos puntos al local host da pantalla en blanco, ¿porque sucede????
-    .then((response) => response.json())
-    .then((data) => {
-      setActividades(data);
-    })
-    .catch((error) => {
-      console.error('Error al obtener datos:', error);
-    });
-  }
-  );
-  
+	const handleSubmit = async (event) => {
+		console.log('entra en el handle submit');
+		event.preventDefault();
+		try {
+			const data = new FormData(event.target);
+			await addActivity(data, token);
+		} catch (error) {
+			setError(error.message);
+		}
+	};
 
-  return (
-    <div>
-      <h1>Ejercicio a Añadir </h1>
-      <button id = "agregar"  onClick={agregarActividad}>Agregar</button>
-      
-      <input
-        type="text"
-        placeholder="Nombre"
-        value={nombre}
-        onChange={(e) => setNombre(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Descripción"
-        value={descripcion}
-        onChange={(e) => setDescripcion(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Tipología"
-        value={tipologia}
-        onChange={(e) => setTipologia(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Grupo Muscular"
-        value={grupoMuscular}
-        onChange={(e) => setGrupoMuscular(e.target.value)}
-      />
-     
-      
-      <ul>
-        {actividades.map((actividad, index) => (
-          <li key={index}>{actividad}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+	const handleDeleteImage = (event) => {
+		event.preventDefault();
+		setImage(null);
+		setImagePreview(null);
+		//Reset el input file
+		document.querySelector('.input-file').value = '';
+	};
+
+	const handleEdit = (event) => {
+		event.preventDefault();
+		setShowAdd(!showAdd);
+	};
+
+	return (
+		<div>
+			<h1 onClick={handleEdit}>Ejercicio a Añadir </h1>
+			{showAdd && (
+				<form onSubmit={handleSubmit}>
+					<button type='submit' id='agregar'>
+						Agregar
+					</button>
+
+					<input
+						type='text'
+						placeholder='Nombre'
+						value={nombre}
+						name='name'
+						onChange={(e) => setNombre(e.target.value)}
+					/>
+					<input
+						type='text'
+						placeholder='Descripción'
+						value={descripcion}
+						name='description'
+						onChange={(e) => setDescripcion(e.target.value)}
+					/>
+					<input
+						type='text'
+						placeholder='Tipología'
+						value={tipologia}
+						name='typology'
+						onChange={(e) => setTipologia(e.target.value)}
+					/>
+					<input
+						type='text'
+						placeholder='Grupo Muscular'
+						value={grupoMuscular}
+						name='muscleGroup'
+						onChange={(e) => setGrupoMuscular(e.target.value)}
+					/>
+					<label>
+						<input
+							type='file'
+							name='image'
+							accept='image/*'
+							className='input-file'
+							onChange={(e) => {
+								const file = e.target.files[0];
+								setImage(file);
+								setImagePreview(URL.createObjectURL(file));
+							}}
+						/>
+						{!image ? (
+							<figure>
+								<img src={upload} alt='Select' title='Select image' />
+								{/* <figcaption>Image(Optional)</figcaption> */}
+							</figure>
+						) : (
+							<figure>
+								<img
+									src={imagePreview}
+									alt='Preview'
+									onClick={handleDeleteImage}
+								/>
+								<figcaption>Preview</figcaption>
+							</figure>
+						)}
+					</label>
+				</form>
+			)}
+		</div>
+	);
+};

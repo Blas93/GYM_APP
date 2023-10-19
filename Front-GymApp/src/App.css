@@ -1,4 +1,5 @@
-/*Poner los datos de CSS de los elementos comunes, ej. el tamaño del header y del footer*//* Estilo para el encabezado (header) */
+/*Poner los datos de CSS de los elementos comunes, ej. el tamaño del header y del footer*/
+/* Estilo para el encabezado (header) */
 header {
     display: flex;
     justify-content: space-between;
@@ -11,21 +12,24 @@ header {
     color: #000000;
     width: 100vh;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding: 1rem 1rem;    
+    padding: 1rem 1rem;
 }
-main{
+
+main {
     overflow-x: hidden;
     margin-bottom: 5rem;
 }
 
-.logo-img{
+.logo-img {
     background-image: url(logo/logogymapp.png);
     width: 10rem;
 }
-h1{
-    font-size: 16px;
 
-.logo{
+h1 {
+    font-size: 16px;
+}
+
+.logo {
     display: flex;
     align-items: center;
     height: 0.2rem;
@@ -34,45 +38,63 @@ h1{
     background-color: #E1E1E1;
     color: #000000;
 }
-main{
+
+main {
     overflow-x: hidden;
     margin-bottom: 5rem;
 }
-.logo-img{
+
+.logo-img {
     background-image: url(logo/logo.png);
     width: 10rem;
 
 }
-h2{
+
+h2 {
     color: #000000;
 }
-h3{
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 
-nav a{
-    padding-right:0.2rem;
+nav a {
+    padding-right: 0.2rem;
 }
+
 /*hacer que al poner el cursor sobre el link se cambie el color de fondo*/
-nav a:hover{
+nav a:hover {
     background-color: white;
 }
 
 /*formato del título de login y register*/
 /* Estilos para el título */
 h1 {
-    text-align: center; /* Centrar el título horizontalmente */
-    margin-bottom: 20px; /* Espaciado inferior del título */
-    color: #333; /* Color del texto del título */
-  }
+    text-align: center;
+    /* Centrar el título horizontalmente */
+    margin-bottom: 20px;
+    /* Espaciado inferior del título */
+    color: #333;
+    /* Color del texto del título */
+}
+
 /*formato de los input de login y register*/
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-  width: 100%; /* Ocupa el ancho completo del formulario */
-  padding: 10px; /* Espaciado interno de los campos de entrada */
-  margin-bottom: 10px; /* Espaciado inferior entre campos de entrada */
-  border: 1px solid #ccc; /* Borde de los campos de entrada */
-  border-radius: 5px; /* Borde redondeado */
+    width: 100%;
+    /* Ocupa el ancho completo del formulario */
+    padding: 10px;
+    /* Espaciado interno de los campos de entrada */
+    margin-bottom: 10px;
+    /* Espaciado inferior entre campos de entrada */
+    border: 1px solid #ccc;
+    /* Borde de los campos de entrada */
+    border-radius: 5px;
+    /* Borde redondeado */
+}
+
+.input-file {
+    display: none;
 }

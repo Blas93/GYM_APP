@@ -31,13 +31,13 @@ app.use(express.json());
 app.use(fileUpload());
 app.use(morgan('dev'));
 app.use(cors());
+app.use('/uploads', express.static('uploads'));
 
 //Rutas de usuario
 app.post('/user', newUserController);
 app.get('/user', getMeController);
 app.get('/user/:id', getUserController);
 app.post('/login', loginController);
-
 
 //Rutas de activities
 app.get('/activities', getActivitiesController);

@@ -28,7 +28,7 @@ const getUserById = async (id) => {
     connection = await getConnection();
     const [result] = await connection.query(
       `
-        SELECT id, email created_at FROM user WHERE id = ?
+        SELECT * FROM user WHERE id = ?
         `,
       [id]
     );
@@ -40,7 +40,6 @@ const getUserById = async (id) => {
     if (connection) connection.release();
   }
 };
-
 // crea un usuario en la base de datos y devuelve su id
 const createUser = async (name, email, password) => {
   let connection;

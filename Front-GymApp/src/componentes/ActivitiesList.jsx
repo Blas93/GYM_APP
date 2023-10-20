@@ -12,10 +12,10 @@ export const ActivitiesList = ({ activities, addActivity }) => {
 		<section>
 			<h2>Lista de Actividades</h2>
 			{/* Desactivar cuando el user del contexto tenga role */}
-			{/* {user && user.role === 'administrator' && (
+			{user && user.role === 'administrator' && (
 				<AddActivity addActivity={addActivity} />
-			)} */}
-			<AddActivity addActivity={addActivity} />
+			)} 
+			
 			{/* <EditInformationActivityPage
 				EditInformationActivityPage={EditInformationActivityPage}
 			/> */}

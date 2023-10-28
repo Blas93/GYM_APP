@@ -10,3 +10,14 @@
 #agregar:hover {
     color: yellow; /* Color de fondo al pasar sobre el botón */
   }
+
+
+  h1 {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;
+  }
+
+   

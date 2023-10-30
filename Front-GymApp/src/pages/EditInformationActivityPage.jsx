@@ -1,31 +1,19 @@
 import { useState } from 'react';
 import '../Css/EditInformationActivityPage.css'
 
+
+
 export const EditInformationActivityPage = () => {
-  const [publicaciones, setPublicaciones] = useState([
-    { id: '1', contenido: 'Publicación 1'},
-    { id: '2', contenido: 'Publicación 2'},
-    { id: '3', contenido: 'Publicación 3'},
-    { id: '4', contenido: 'Publicación 4'},
-    { id: '5', contenido: 'Publicación 5'},
-    { id: '6', contenido: 'Publicación 6'},
-    { id: '7', contenido: 'Publicación 7'},
-    { id: '8', contenido: 'Publicación 8'},
-  ]);
+  const [publicaciones, setPublicaciones] = useState([]);
   const [idEditar, setIdEditar] = useState('');
   const [nuevoContenido, setNuevoContenido] = useState('');
 
   const editarPublicacion = () => {
-    if (idEditar === '' || nuevoContenido.trim() === '') {
-      return;
-    }
+    if (idEditar === '' || nuevoContenido.trim() === '') return;
 
-    const nuevasPublicaciones = publicaciones.map((publicacion) => {
-      if (publicacion.id === idEditar) {
-        return { ...publicacion, contenido: nuevoContenido };
-      }
-      return publicacion;
-    });
+    const nuevasPublicaciones = publicaciones.map((publicacion) =>
+      publicacion.id === idEditar ? { ...publicacion, contenido: nuevoContenido } : publicacion
+    );
 
     setPublicaciones(nuevasPublicaciones);
     setIdEditar('');

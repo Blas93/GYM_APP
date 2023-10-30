@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Activity } from './Activity';
 import { AddActivity } from '../pages/AddActivity';
 // import { DeleteInformationActivityPage } from '../pages/DeleteInformationActivityPage';
-// import { EditInformationActivityPage } from '../pages/EditInformationActivityPage';
+import { EditInformationActivityPage } from '../pages/EditInformationActivityPage';
 import { AuthContext } from '../context/AuthContext';
 
 export const ActivitiesList = ({ activities, addActivity }) => {
@@ -16,14 +16,15 @@ export const ActivitiesList = ({ activities, addActivity }) => {
 				<AddActivity addActivity={addActivity} />
 			)} 
 			
-			{/* <EditInformationActivityPage
-				EditInformationActivityPage={EditInformationActivityPage}
-			/> */}
+			
 
 			{activities.length ? (
 				<ul>
 					{activities.map((activity) => (
 						<li key={activity.id}>
+							{ <EditInformationActivityPage
+				EditInformationActivityPage={EditInformationActivityPage}
+			/> }
 							<Activity activity={activity} />
 						</li>
 					))}

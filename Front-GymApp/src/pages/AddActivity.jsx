@@ -93,7 +93,7 @@ export const AddActivity = ({ addActivity }) => {
 						/>
 						{!image ? (
 							<figure>
-								<img src={upload} alt='Select' title='Select image' />
+								<img id='subida' src={upload} alt='Select' title='Select image' />
 								{/* <figcaption>Image(Optional)</figcaption> */}
 							</figure>
 						) : (

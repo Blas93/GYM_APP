@@ -35,21 +35,3 @@ export const ActivitiesList = ({ activities, addActivity }) => {
 	);
 };
 
-// Codigo que creo que  es necesario, pero que no se como debo implantarlo en esta parte del codigo
-
-/* ( const App = () => {
-  const publicacionesToDelete = [
-    { id: '1', contenido: 'Publicación 1' },
-    { id: '2', contenido: 'Publicación 2' },
-    
-  ];
-
-  return (
-    <div>
-      <Link to="/delete-information">
-        Ir a la página de eliminar información
-      </Link>
-      <DeleteInformationActivityPage publicacionesToDelete={publicacionesToDelete} />
-    </div>
-  );
-};)*/

@@ -6,7 +6,7 @@ export const Header = () => {
     return (
         <header>
                 <a href ="/" className="logo-img">
-                    <img src="/logogymapp.png" alt="Logo de la aplicación"/>
+                    <img src="../logo/logogymapp.png" alt="Logo de la aplicación"/>
                 </a>  
             <h2 className="logo-nombre">
             <Link to ="/">

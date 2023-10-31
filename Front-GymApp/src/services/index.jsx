@@ -25,10 +25,10 @@ export const getSigleActivityService = async (id) => {
 	return json.data;
 };
 
-//Cambiar ruta y poner la del BACK que se encargue de actualizar una actividad
+//Se actualiza la ruta a la correspondiente a editar coincidiendo con la del back
 export const editActivityService = async (id, data, token) => {
 	console.log('token', token);
-	const response = await fetch(`${import.meta.env.VITE_APP_BACKEND}/activity`, {
+	const response = await fetch(`${import.meta.env.VITE_APP_BACKEND}//activity/:id`, {
 		method: 'PUT',
 		headers: {
 			Authorization: token,

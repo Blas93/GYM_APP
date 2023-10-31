@@ -30,15 +30,14 @@ export const useActivities = () => {
 		await deleteActivityService(id, token);
 		const allNewActivities = await getAllActivitiesServices();
 		setActivities(allNewActivities);
-		// Estaria bien tener un navegate a home
 	};
-	// Falta crear el service
-	const editActivity = async (id, activity, token) => {
+	// Hecho en el hook activityDefinition 
+	/*const editActivity = async (id, activity, token) => {
 		await editActivityService(id, activity, token);
 		const allNewActivities = await getAllActivitiesServices();
 		setActivities(allNewActivities);
 		// Estaria bien tener un navegate a home
-	};
+	};*/
 	// Añadir addActivity, deleteActivity, editActivity al return cuando esten bien
 	return {
 		activities,

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getSigleActivityService } from "../services";
+import { editActivityService, getSigleActivityService } from "../services";
 
 const useActivity = (id)=> {
 const [activity, setActivity] = useState (null);
@@ -23,9 +23,15 @@ const loadactivity =async () => {
 loadactivity();
 }, [id]);
 
+const editActivity = async (id, data, token) => {
+    await editActivityService(id, data, token);
+    const newActivity = await getSigleActivityService (id);
+    setActivity(newActivity);
+}
 
-return {activity, loading, error};
+return {activity, loading, error, editActivity };
 };
 
 
 export default useActivity;
+

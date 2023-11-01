@@ -45,6 +45,6 @@ export const useActivities = () => {
 		error,
 		addActivity,
 		deleteActivity,
-		editActivity,
+		
 	};
 };

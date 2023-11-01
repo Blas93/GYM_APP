@@ -1,4 +1,5 @@
-.src{
-    background-image: '../logo/logogymapp.png';
+img{
+    background-image: "logo/logogymapp.png" ;
     width: 10rem;
+    size: 50px 50px;
 }

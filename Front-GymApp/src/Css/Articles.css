@@ -5,6 +5,8 @@ article {
     border: 1px solid #ccc;
     background-color: #fff;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bolder;
+    
   }
   
 
@@ -12,4 +14,13 @@ article {
     font-size: 16px;
     line-height: 1.4;
     color: #666;
+    
   }
+    
+/*Formato al contenido de cada actividad*/
+
+.name{
+  align-items: center;
+  
+  }
+    

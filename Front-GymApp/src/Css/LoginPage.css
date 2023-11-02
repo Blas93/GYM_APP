@@ -33,7 +33,7 @@ section {
     border-radius: 5px; /* Borde redondeado del botón */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
     transition: background-color 0.3s ease; /* Transición de color de fondo */
-    width: 100%; /* Ocupa el ancho completo del formulario */
+    /*width: 100%; /* Ocupa el ancho completo del formulario */
   }
   
   button:hover {

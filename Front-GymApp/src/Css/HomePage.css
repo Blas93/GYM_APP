@@ -30,10 +30,25 @@
   .Filter button:hover {
     color: yellow; /* Color de fondo al pasar sobre el botón en Filter */
   }
+  .Filtro{
+    display: flex; /*coloca los elementos en línea*/
+    gap: 2rem; /*separa los botones entre ellos*/
+    font-size: 15px;
+    text-align: center;
+  }
+  #grupoMuscular{
+    font-size: 20px;
+  }
+  #tipologia{
+    font-size: 20px; 
+  }
+  
   
   /* Estilos para los elementos en ActivitiesList (ajusta según tus necesidades) */
   .ActivitiesList p {
     font-size: 16px; /* Tamaño de fuente de los elementos en ActivitiesList */
     margin-bottom: 10px; /* Espaciado inferior de los elementos en ActivitiesList */
   }
+
   
+

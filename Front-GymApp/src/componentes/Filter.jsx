@@ -17,26 +17,24 @@ export const Filter = () => {
     }
 };
     return(
-        <form method="get" >
+        <form className="Filtro" method="get" >
         <label htmlFor="grupoMuscular">Grupo Muscular:</label>
         <select name="grupoMuscular" id="grupoMuscular">
-            <option value="">Todos</option>
-            <option value="piernas">Piernas</option>
-            <option value="brazos">Brazos</option>
+            <option id="1" value="">Todos</option>
+            <option id="1" value="piernas">Piernas</option>
+            <option id="1" value="brazos">Brazos</option>
         </select>
     
         <label htmlFor="tipologia">Tipología:</label>
         <select name="tipologia" id="tipologia">
-            <option value="">Todas</option>
-            <option value="cardio">Cardio</option>
-            <option value="pesas">Pesas</option>
+            <option id="2" value="">Todas</option>
+            <option id="2"value="cardio">Cardio</option>
+            <option id="2"value="pesas">Pesas</option>
         </select>
     
         <button id="buscar" onClick={handleFilter} >Filtrar</button>
         
-        <div id="respuesta">{respuesta}
-
-        </div>
+        
  
     </form>  
     )

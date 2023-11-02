@@ -1,10 +1,10 @@
 export const Activity = ({ activity }) => {
 	return (
 		<article>
-			<p>{activity.activity_name}</p>
-			<p>{activity.description}</p>
-			<p>{activity.muscle_group}</p>
-			<p>{activity.typology}</p>
+			<p id="name">{activity.activity_name}</p>
+			<p id="description">{activity.description}</p>
+			<p id="musculargroup">{activity.muscle_group}</p>
+			<p id="typology">{activity.typology}</p>
 
 			{activity.image && (
 				<img

@@ -6,8 +6,14 @@ export const Header = () => {
     return (
         <header>
                 <a  className="logo-img">
+
                     <img href="logo/logogymapp.png" alt="Logo de la aplicación"/>
                 </a>  
+
+                    <img href="logo/logogymapp.png" alt="Logo de la aplicación" />
+                </a>
+ 
+
             <h2 className="logo-nombre">
             <Link to ="/">
                     Gym App

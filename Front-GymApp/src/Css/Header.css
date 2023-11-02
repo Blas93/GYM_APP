@@ -1,5 +1,6 @@
 
 
+
 header {
     display: flex;
     justify-content: space-between;
@@ -14,3 +15,10 @@ header {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 1rem 1rem;
 }
+
+img{
+    background-image: "logo/logogymapp.png" ;
+    width: 10rem;
+    size: 50px 50px;
+}
+

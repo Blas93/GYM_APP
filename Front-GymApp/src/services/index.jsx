@@ -12,10 +12,29 @@ export const getAllActivitiesServices = async () => {
 };
 
 //conexión con el servidor para traer la información de la actividad
+//añadir aqui un header , hacer el fetch igual que la función de abajo, getuserdatasevices, modf. la ruta. 
 export const getSigleActivityService = async (id) => {
 	const response = await fetch(
 		`${import.meta.env.VITE_APP_BACKEND}/activity/${id}`
 	);
+
+	const json = await response.json();
+	if (!response.ok) {
+		throw new Error(json.message);
+	}
+	return json.data;
+};
+
+//Se actualiza la ruta a la correspondiente a editar coincidiendo con la del back
+export const editActivityService = async (id, data, token) => {
+	console.log('token', token);
+	const response = await fetch(`${import.meta.env.VITE_APP_BACKEND}//activity/:id`, {
+		method: 'PUT',
+		headers: {
+			Authorization: token,
+		},
+		body: data,
+	});
 
 	const json = await response.json();
 	if (!response.ok) {

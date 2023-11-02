@@ -86,8 +86,7 @@ fieldset {
     flex-flow: wrap;
     justify-content: flex-end;
     align-content: center;
-
-    display: inline;
+    /*display: inline;*/
     /*coloca los bloques de la imágenes centrado*/
 
 }

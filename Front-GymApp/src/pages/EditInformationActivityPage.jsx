@@ -22,28 +22,28 @@ export const EditInformationActivityPage = () => {
 
   return (
     <div>
-      <h1>Editar Publicaciones</h1>
-      <ul>
-        {publicaciones.map((publicacion) => (
-          <li key={publicacion.id}>
-            {publicacion.id === idEditar ? (
-              <div>
-                <input
-                  type="text"
-                  value={nuevoContenido}
-                  onChange={(e) => setNuevoContenido(e.target.value)}
-                />
-                <button onClick={editarPublicacion}>Guardar</button>
-              </div>
-            ) : (
-              <div>
-                {publicacion.contenido}
-                <button onClick={() => setIdEditar(publicacion.id)}>Editar</button>
-              </div>
-            )}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <h1>Editar Publicacion</h1>
+    <button onClick={editarPublicacion}>Guardar</button>
+    <ul>
+      {publicaciones.map((publicacion) => (
+        <li key={publicacion.id}>
+          {publicacion.id === idEditar ? (
+            <div>
+              <input
+                type="text"
+                value={nuevoContenido}
+                onChange={(e) => setNuevoContenido(e.target.value)}
+              />
+            </div>
+          ) : (
+            <div>
+              {publicacion.contenido}
+              <button onClick={() => setIdEditar(publicacion.id)}>Editar</button>
+            </div>
+          )}
+        </li>
+      ))}
+    </ul>
+  </div>
   );
 }

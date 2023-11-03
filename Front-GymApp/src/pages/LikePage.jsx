@@ -1,3 +1,5 @@
+import useActivity from "../hooks/activityDefinition";
+
 export const LikePage = () => {
     const likeButton = document.getElementById('likeButton');
     let likeCount = 0;
@@ -15,6 +17,11 @@ export const LikePage = () => {
     return (
         <section> 
             <h1> Mis ejercicios Favoritos  </h1>
+            <button>
+            <span>{useActivity.likes}</span>
+            <span class="material-symbols-outlined">star</span>
+            </button>
+
             <p> Se mostrará el listado de los ejercicio que el usuario tenga como favorito </p> 
         </section>
     );

@@ -15,3 +15,13 @@ export const Activity = ({ activity }) => {
 		</article>
 	);
 };
+
+export const ActivityList = ({ activities}) => {
+	const reverseActivities = [...activities].reverse();
+
+	return(
+		<div>
+			{reverseActivities.map((activity, index) => (<activity key={index}activity={activity}/>))}
+		</div>
+	);
+};

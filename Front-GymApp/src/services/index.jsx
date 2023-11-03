@@ -59,7 +59,7 @@ export const loginUserServices = async (email, password) => {
 
 	return json.data;
 };
-// Añadir REgistro de usuarios
+// Añadir Registro de usuarios
 
 export const registerUserService = async (user) => {
 	console.log(`${import.meta.env.VITE_APP_BACKEND}`);

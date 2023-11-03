@@ -21,10 +21,10 @@ export const Header = () => {
             <nav>
             <ul className="nav">
             <li className="list-link">
-                <Link to = "/register" id="r-link" className="link-r"> Register</Link>
+                <Link to = "/register" id="r-link" className="link-r"> Registro</Link>
             </li>
             <li className="list-link">
-                <Link to = "/login"id="l-link" className="link-l">Login</Link>
+                <Link to = "/login"id="l-link" className="link-l">Acceso</Link>
         
             </li>
         </ul>

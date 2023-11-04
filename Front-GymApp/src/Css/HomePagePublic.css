@@ -30,6 +30,8 @@
     background-repeat: no-repeat;
     margin: 1rem;
     text-align: right;
+    width: 80%;
+   
 }
 
 #label-donde {
@@ -42,6 +44,7 @@
     background-repeat: no-repeat;
     margin: 1rem;
     text-align: center;
+    width: 80%;
 }
 
 #label-como {
@@ -54,7 +57,9 @@
     background-repeat: no-repeat;
     margin: 1rem;
     text-align: left;
+    width: 80%;
 }
+
 
 span {
     display: block;

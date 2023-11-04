@@ -2,30 +2,29 @@ import { useState } from 'react';
 import '../Css/EditInformationActivityPage.css'
 
 
+export const EditInformationActivityPage = (props) => {
+const [publicaciones, setPublicaciones] = useState([]);
+const [idEditar, setIdEditar] = useState('');
+const [nuevoContenido, setNuevoContenido] = useState('');
 
-export const EditInformationActivityPage = () => {
-  const [publicaciones, setPublicaciones] = useState([]);
-  const [idEditar, setIdEditar] = useState('');
-  const [nuevoContenido, setNuevoContenido] = useState('');
+const editarPublicacion = () => {
+if (idEditar === '' || nuevoContenido.trim() === '') return;
 
-  const editarPublicacion = () => {
-    if (idEditar === '' || nuevoContenido.trim() === '') return;
+const nuevasPublicaciones = publicaciones.map((publicacion) =>
+publicacion.id === idEditar ? { ...publicacion, contenido: nuevoContenido } : publicacion
+);
 
-    const nuevasPublicaciones = publicaciones.map((publicacion) =>
-      publicacion.id === idEditar ? { ...publicacion, contenido: nuevoContenido } : publicacion
-    );
+setPublicaciones(nuevasPublicaciones);
+setIdEditar('');
+setNuevoContenido('');
+};
 
-    setPublicaciones(nuevasPublicaciones);
-    setIdEditar('');
-    setNuevoContenido('');
-  };
-
-  return (
-    <div>
-    <h1>Editar Publicacion</h1>
+return (
+<div>
+   <h1>Editar Publicacion</h1>
     <button onClick={editarPublicacion}>Guardar</button>
     <ul>
-      {publicaciones.map((publicacion) => (
+    {publicaciones.map((publicacion) => (
         <li key={publicacion.id}>
           {publicacion.id === idEditar ? (
             <div>
@@ -45,5 +44,5 @@ export const EditInformationActivityPage = () => {
       ))}
     </ul>
   </div>
-  );
-}
+);
+} 

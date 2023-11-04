@@ -28,9 +28,9 @@ button {
   /*width: 100%; (lo omito porque quiero que ocupe el tamaño del botón) ocupa el ancho completo del formulario */
 }
 
-button:hover {
+/*button:hover {
   color: yellow; /* Color de fondo al pasar sobre el botón */
-}
+/*}/*
 
 /* Estilos para el mensaje de error */
 p {

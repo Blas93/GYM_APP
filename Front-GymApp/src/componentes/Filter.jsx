@@ -2,7 +2,7 @@ import react, { useState } from 'react';
 
 export const Filter = () => {
     
-    const [respuesta, setRespuesta] = useState('');
+    const [response, setRespuesta] = useState('');
 
     const handleFilter = async () => {
         const grupoMuscular = document.getElementById('grupoMuscular').value;

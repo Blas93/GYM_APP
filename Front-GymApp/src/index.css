@@ -4,8 +4,7 @@
   box-sizing: border-box;
 }
 #root{
-  height: 100vh;
-  width: 100vh;
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +13,7 @@
   background-color: white;
 }
 header{
- height: 5rem;
+height: 5rem;
 }
 
 ul{
@@ -63,7 +62,7 @@ a{
   font-style: normal;
   
   padding: 2rem;
-  width: 100vh;
+  width: 100%;
 }
 footer{
   color: white;

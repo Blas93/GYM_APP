@@ -5,10 +5,9 @@ import '../Css/Header.css';
 export const Header = () => {
     return (
         <header>
-                <a  className="logo-img">
-
-                    <img href="logo/logogymapp.png" alt="Logo de la aplicación"/>
-                </a>  
+                <div className="logo-img">
+            <img href="../descarga.jpeg" alt="Logo de la aplicación"/>
+                </div>  
 
             <h2 className="logo-nombre">
             <Link to ="/">

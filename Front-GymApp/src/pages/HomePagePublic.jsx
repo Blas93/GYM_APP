@@ -3,7 +3,7 @@ import '../Css/HomePagePublic.css'
 
 export const HomePagePublic = () => {
   return(
-<section className='HomePublic'>
+<section className='home-public'>
     <h1 className='titulo-principal'>¿Quieres saber más sobre GymApp?</h1>
     <p className='eslogan'> GymApp es una aplicación para organizar tus ejercicios, así de forma fácil y sencilla puedes organizar el plan de entrenamiento que más te convenga, según tu tiempo, la zona de tu cuerpo en la que te quieras focalizar</p>  
     <p className='eslogan'>Podrás organizar tu plan de entrenamiento de forma personalizada y completamente</p>

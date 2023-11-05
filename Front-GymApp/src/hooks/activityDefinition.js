@@ -1,27 +1,40 @@
 import { useEffect, useState } from "react";
 import { editActivityService, getSigleActivityService } from "../services";
+import { useSearchParams } from "react-router-dom";
 
-const useActivity = (id)=> {
+
+const useActivity = ()=> {
 const [activity, setActivity] = useState (null);
 const [loading, setLoading] = useState (true);
-const [error, setError] = useState("");
+//const [error, setError] = useState("");
+const [searchParams] =useSearchParams();
 
 useEffect(() => {
 const loadactivity =async () => {
     try {
-        setLoading(true);
+        const res = await fetch(
+            `http://localhost:3000/filterActivities?${searchParams.toString()}`
+        );
+        const body = await res.json();
 
-        const data = await getSigleActivityService (id);
-        setActivity (data);
+        setActivity(body.data);
+
+        //setLoading(true);
+
+        //const data = await getSigleActivityService (id);
+        //setActivity (data);
     } catch (error) {
-        setError(error.message);
-    } finally {
+        //setError(error.message);
+        console.log(error);
+    } 
+    
+    finally {
         setLoading(false);
 
     }
 }
 loadactivity();
-}, [id]);
+}, );
 
 const editActivity = async (id, data, token) => {
     await editActivityService(id, data, token);
@@ -29,7 +42,7 @@ const editActivity = async (id, data, token) => {
     setActivity(newActivity);
 }
 
-return {activity, loading, error, editActivity };
+return {activity, loading, /*error,*/ editActivity };
 };
 
 

@@ -1,5 +1,24 @@
 import react, { useState } from 'react';
 
+/*const {Filter} = queryParams;
+
+let sqlQuery = "SELECT * FROM  activities ";
+const values = [];
+let clause = "WHERE";
+
+if (grupoMusucular) {
+    sqlQuery += `${clause} grupoMuscular LIKE ?`;
+    values.push(`%${grupoMusucular}%`);
+    clause = "AND";
+}
+
+if (tipologia) {
+    sqlQuery += `${clause}tipologia LIKE ?`;
+    values.push(`%${tipologia}%`);
+}
+
+console.log(sqlQuery, values);*/
+
 export const Filter = () => {
     
     const [response, setRespuesta] = useState('');

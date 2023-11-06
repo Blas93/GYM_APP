@@ -1,6 +1,6 @@
 header {
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     align-items: center;
     position: sticky;
     opacity: 1;
@@ -10,11 +10,14 @@ header {
     width: 100%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 1rem 1rem;
+   
 }
 
-img{
-    background-image: "logo/logogymapp.png" ;
-    width: 10rem;
-    size: 50px 50px;
+ a {
+    color: #000000;
+    align-items: center;
+    justify-content: center;
 }
 
+
+   

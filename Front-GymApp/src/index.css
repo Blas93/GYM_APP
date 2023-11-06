@@ -42,8 +42,12 @@ a{
   text-decoration: none;
   padding: 0.5rem;
   display: flex;
+
+  
+
   text-align: center;
   vertical-align: middle;
+
 }
 
 /*formato al link de Registro*/

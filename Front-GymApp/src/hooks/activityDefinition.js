@@ -1,40 +1,38 @@
 import { useEffect, useState } from "react";
 import { editActivityService, getSigleActivityService } from "../services";
-import { useSearchParams } from "react-router-dom";
+//import { useSearchParams } from "react-router-dom";
 
 
-const useActivity = ()=> {
+const useActivity = (id)=> {
 const [activity, setActivity] = useState (null);
 const [loading, setLoading] = useState (true);
-//const [error, setError] = useState("");
-const [searchParams] =useSearchParams();
+const [error, setError] = useState("");
+//const [searchParams] =useSearchParams();
 
 useEffect(() => {
 const loadactivity =async () => {
     try {
-        const res = await fetch(
+        setLoading(true);
+        /*const res = await fetch(
             `http://localhost:3000/filterActivities?${searchParams.toString()}`
         );
         const body = await res.json();
 
-        setActivity(body.data);
+        setActivity(body.data);*/
 
-        //setLoading(true);
+        
 
-        //const data = await getSigleActivityService (id);
-        //setActivity (data);
+        const data = await getSigleActivityService (id);
+        setActivity (data);
     } catch (error) {
-        //setError(error.message);
+        setError(error.message);
         console.log(error);
-    } 
-    
-    finally {
+    } finally {
         setLoading(false);
-
     }
 }
 loadactivity();
-}, );
+}, [id]);
 
 const editActivity = async (id, data, token) => {
     await editActivityService(id, data, token);
@@ -42,7 +40,7 @@ const editActivity = async (id, data, token) => {
     setActivity(newActivity);
 }
 
-return {activity, loading, /*error,*/ editActivity };
+return {activity, loading, error, editActivity };
 };
 
 

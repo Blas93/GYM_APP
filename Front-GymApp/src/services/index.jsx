@@ -28,7 +28,7 @@ export const getSigleActivityService = async (id) => {
 //Se actualiza la ruta a la correspondiente a editar coincidiendo con la del back
 export const editActivityService = async (id, data, token) => {
 	console.log('token', token);
-	const response = await fetch(`${import.meta.env.VITE_APP_BACKEND}//activity/:id`, {
+	const response = await fetch(`${import.meta.env.VITE_APP_BACKEND}/activity/${id}`, {
 		method: 'PUT',
 		headers: {
 			Authorization: token,
@@ -36,6 +36,21 @@ export const editActivityService = async (id, data, token) => {
 		body: data,
 	});
 
+	const json = await response.json();
+	if (!response.ok) {
+		throw new Error(json.message);
+	}
+	return json.data;
+};
+
+//Se borra una activity por su id
+export const deleteActivityService = async (id, token) => {
+	const response = await fetch(`${import.meta.env.VITE_APP_BACKEND}/activity/${id}`, {
+		method: 'DELETE',
+		headers: {
+			Authorization: token,
+		},
+	});
 	const json = await response.json();
 	if (!response.ok) {
 		throw new Error(json.message);

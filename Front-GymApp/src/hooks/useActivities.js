@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { addActivityService, getAllActivitiesServices } from '../services';
+import { addActivityService, deleteActivityService, getAllActivitiesServices } from '../services';
 
 export const useActivities = () => {
 	const [activities, setActivities] = useState([]);
@@ -45,6 +45,5 @@ export const useActivities = () => {
 		error,
 		addActivity,
 		deleteActivity,
-		
 	};
 };

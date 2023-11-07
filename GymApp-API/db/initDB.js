@@ -36,8 +36,8 @@ async function initDB() {
             id INT PRIMARY KEY AUTO_INCREMENT,
             user_id INT NOT NULL,
             activity_id INT NOT NULL,
-            FOREIGN KEY (user_id) REFERENCES user(id),
-            FOREIGN KEY (activity_id) REFERENCES activities(id)
+            FOREIGN KEY (user_id) REFERENCES user(id) ON DELETE CASCADE ON UPDATE CASCADE,
+            FOREIGN KEY (activity_id) REFERENCES activities(id)ON DELETE CASCADE ON UPDATE CASCADE
           )`
     );
 

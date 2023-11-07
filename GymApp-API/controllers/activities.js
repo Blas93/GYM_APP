@@ -8,6 +8,7 @@ const {
   getActivities,
 } = require('../db/activities');
 const { generateError, processAndSavingImg } = require('../helpers');
+const { log } = require('console');
 
 const newActivityController = async (req, res, next) => {
   try {
@@ -88,13 +89,14 @@ const modifyActivityController = async (req, res, next) => {
     const { id } = req.params;
 
     const activity = await getActivityById(id);
+    console.log('Desde activities Controllers', activity);
 
     if (!activity.id) {
       throw generateError('La actividad no existe', 404);
     }
 
     const updatedActivity = { ...activity, ...req.body };
-
+    console.log('Info actualizada',updatedActivity);
     if (req.files?.image) {
       updatedActivity.image = await processAndSavingImg(
         req.files.image.data,

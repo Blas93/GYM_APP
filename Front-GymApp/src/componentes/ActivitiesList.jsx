@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { Activity } from './Activity';
 import { AddActivity } from '../pages/AddActivity';
 // import { DeleteInformationActivityPage } from '../pages/DeleteInformationActivityPage';
-import { EditInformationActivityPage } from '../pages/EditInformationActivityPage';
+//import { EditInformationActivityPage } from '../pages/EditInformationActivityPage';
 import { AuthContext } from '../context/AuthContext';
 
-export const ActivitiesList = ({ activities, addActivity }) => {
+export const ActivitiesList = ({ activities, addActivity, deleteActivity }) => {
 	const { user } = useContext(AuthContext); //Necesitamos que el usuario tenga role
 	console.log('activities', activities);
 	return (
@@ -21,12 +21,16 @@ export const ActivitiesList = ({ activities, addActivity }) => {
 			{activities.length ? (
 				<ul>
 					{activities.map((activity) => (
+						
 						<li key={activity.id}>
-							{user && user.role === 'administrator' && ( <EditInformationActivityPage
+							{/*{user && user.role === 'administrator' && ( <EditInformationActivityPage
 				EditInformationActivityPage={EditInformationActivityPage}
-			/>)}
-							<Activity activity={activity} />
+							/>)}*/}
+							
+								<Activity activity={activity} deleteActivity={deleteActivity}/>
+							
 						</li>
+						
 					))}
 				</ul>
 			) : (

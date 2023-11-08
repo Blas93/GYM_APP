@@ -9,7 +9,7 @@ import { RegisterPage } from "./pages/RegisterPage.jsx";
 import { HomePage } from "./pages/HomePage.jsx";
 import { AddActivity } from "./pages/AddActivity.jsx";
 import { LikePage } from "./pages/LikePage.jsx";
-//import { ActivityPage} from "./pages/ActivityPage.jsx";
+import { ActivityPage} from "./pages/ActivityPage.jsx";
 import { EditInformationActivityPage } from "./pages/EditInformationActivityPage.jsx";
 import { DeleteInformationActivityPage } from "./pages/DeleteInformationActivityPage.jsx";
 import { AuthProviderComponent } from "./context/AuthContext.jsx";
@@ -28,7 +28,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/home" element={<HomePage />} />
-          {/*<Route path="/activity/:id" element={<ActivityPage />} />*/}
+          <Route path="/activity/:id" element={<ActivityPage />} />
           <Route path="/activity/:id/new" element={<AddActivity />} />
           <Route path="/activities/:id/favorite" element={<LikePage />} />
           <Route path="/activities/:id/editInformation" element={<EditInformationActivityPage />} />

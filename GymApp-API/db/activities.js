@@ -1,4 +1,4 @@
-const { query } = require('express');
+//const { query } = require('express');
 const { getConnection } = require('./db');
 
 const createActivities = async (
@@ -20,7 +20,7 @@ const createActivities = async (
     );
     return newActivities.insertId;
   } finally {
-    // connection.relese();
+    if(connection) connection.release();
   }
 };
 
@@ -64,9 +64,9 @@ const getActivityById = async (id) => {
       `,
       [id]
     );
-    return resultActivity;
+    return resultActivity[0];
   } finally {
-    // if (connection) connection.relese();
+    if (connection) connection.release();
   }
 };
 
@@ -83,17 +83,17 @@ const deleteById = async (id) => {
     );
     return resultDelete;
   } finally {
-    // if (connection) connection.relese();
+   if (connection) connection.release();
   }
 };
 
-const modifyActivity = async (
+const modifyActivity = async ({
   id,
-  name,
+  activity_name,
   description,
   image,
   typology,
-  muscleGroup
+  muscle_group}
 ) => {
   let connection;
 
@@ -104,11 +104,11 @@ const modifyActivity = async (
       `
     UPDATE activities SET activity_name = ?, description = ?, image = ?, typology = ?, muscle_group = ? WHERE id = ?
     `,
-      [name, description, image, typology, muscleGroup, id]
+      [activity_name, description, image, typology, muscle_group, id]
     );
     return modifyActivity;
   } finally {
-    // if (connection) connection.release();
+    if (connection) connection.release();
   }
 };
 

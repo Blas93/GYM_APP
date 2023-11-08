@@ -10,7 +10,7 @@ export const HomePage = () => {
     return ( 
         <>
             <Filter />
-            <ActivitiesList activities={activities} addActivity={addActivity} />
+            <ActivitiesList activities={activities} addActivity={addActivity} deleteActivity={deleteActivity} />
         </>
     )
 }

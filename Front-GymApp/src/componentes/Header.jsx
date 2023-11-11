@@ -9,8 +9,8 @@ export const Header = () => {
 
                 
 
-                <div className="logo-img">
-            <img href="../descarga.jpeg" alt="Logo de la aplicación"/>
+                <div className="logo-img" >
+            <img href="public/logo/logogymapp.png" />
                 </div>  
 
 

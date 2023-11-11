@@ -112,10 +112,16 @@ p {
     width: 1rem;
     height: 1rem;
 }
-.home-public-blocks{
-    display: flex; /*coloca las cajas en línea*/
-justify-content: space-between; /*separa a la misma distancia las cajas entre si*/
-background-color: white;
+.home-public-blocks {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+}
+
+/* Asegura que cada bloque dentro de .home-public-blocks ocupe el ancho completo */
+.home-public-blocks fieldset {
+    width: 100%;
 }
 
 @media (max-width: 325px){

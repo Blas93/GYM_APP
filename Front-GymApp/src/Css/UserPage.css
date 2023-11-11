@@ -1,0 +1,19 @@
+section {
+    border: 2px solid #333; /* Borde para resaltar la sección */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 20px; /* Margen inferior para separar secciones */
+}
+
+h2 {
+    color:black; /* Color amarillo para el h2 */
+    border-bottom: 2px solid #333; /* Línea inferior para destacar el h2 */
+    padding-bottom: 10px; /* Espaciado en la parte inferior del h2 */
+    margin-bottom: 20px; /* Margen inferior para separar del contenido siguiente */
+}
+
+/* Estilos para el contenido dentro de la sección (UserInfo y FavoriteList) */
+section > * {
+    margin-bottom: 15px; /* Espaciado inferior para separar elementos internos */
+}
+
+/* Puedes ajustar los estilos según tus preferencias y necesidades específicas */

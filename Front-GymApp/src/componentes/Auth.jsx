@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { useContext } from "react";
 import defaultUser from "../svg/defaultuser.svg";
+import '../Css/Auth.css'
 
 
 export const Auth = () => {

@@ -1,23 +1,32 @@
+
 .titulo-principal {
     padding: 2rem;
 }
 
 .eslogan {
+    font-family: 'Arial', sans-serif; /* Tipo de letra */
     color: #000;
     text-justify: inherit;
+    line-height: 1.5; 
+    position: relative;
+    margin-bottom: 15px;
 }
+
 
 .gratuito {
-    color: #FFDE59;
+    text-align: center;
+    
+    color: #FFD700; /* Amarillo */
+    position: fixed;
+   
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000; /* Fondo negro */
+   
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); /* Sombra amarilla */
+    }
 
-    text-shadow: 0 0 30px #FFDE59;
-    padding: 0.5rem;
-    margin: 0.5rem;
-
-    text-shadow: 0 0 30 px #FFDE59;
-    padding: 0.05rem;
-    margin: 0.05rem;
-}
 
 /*Imágenes correspondientes a las tres etiquetas:*/
 #label-cuando {
@@ -84,20 +93,12 @@ h3 {
 }
 
 fieldset {
-    border-radius: 0.5rem;
-    /*padding: 1rem;*/
-    margin: 1rem;
-
-    height: 7.5rem;
-    width: 400px;
-    flex-flow: wrap;
-    justify-content: flex-end;
-    align-content: center;
-    /*display: inline; descoloca la última caja del formulario*/
-    /*coloca los bloques de la imágenes centrado*/
-
+    border: 2px solid transparent; /* Amarillo */
+    padding: 15px;
+    border-radius: 10px;
+    width: calc(33.3333% - 20px); /* El 20px es la suma de los márgenes horizontales */
+    box-sizing: border-box;
 }
-
 h4 {
     color: white;
     -webkit-text-stroke: 0.03rem black;
@@ -119,17 +120,23 @@ background-color: white;
 
 @media (max-width: 325px){
     .home-public-blocks{
-    display: block; /*coloca en bloque las cajas*/
+    display: flex; /*coloca en bloque las cajas*/
     justify-content: space-between; /*separa a la misma distancia las cajas entre si*/
+    margin-top: 30px;
 }
     .home-public{
     box-sizing: content-box;
+    width: 100%;
+    height: 100%;
 }
  #root{
     width: 100%;
  }   
  fieldset {
-width: 100%;
-height: 100%;
+    border: 2px solid #FFD700; /* Amarillo */
+    padding: 15px;
+    border-radius: 10px;
+    width: calc(33.3333% - 20px); /* El 20px es la suma de los márgenes horizontales */
+    box-sizing: border-box;
 }
 }

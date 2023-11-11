@@ -34,7 +34,7 @@ button {
 
 /* Estilos para el mensaje de error */
 p {
-  color: #ff0000; /* Color rojo para el mensaje de error */
+   /* Color rojo para el mensaje de error */
   font-weight: bold; /* Texto en negrita para el mensaje de error */
   margin-top: 10px; /* Espaciado superior del mensaje de error */
   

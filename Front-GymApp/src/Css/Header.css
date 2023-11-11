@@ -114,3 +114,26 @@ a{
   border-radius: 50%; /* Para una forma de círculo si lo deseas */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
+
+
+/* Estilos para el logo */
+.logo-nombre {
+  font-family: 'cursive'; /* Cambia la fuente a una estilo cursiva */
+  font-size: 2em;
+  margin: 0;
+  color: black; /* Amarillo */
+  animation: bounce 1s infinite alternate; /* Agrega una animación de rebote */
+}
+
+/* Define la animación de rebote */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0); /* Posición inicial y final (sin movimiento en el eje Y) */
+  }
+  40% {
+      transform: translateY(-10px); /* Movimiento hacia arriba en el eje Y en el 40% del tiempo */
+  }
+  60% {
+      transform: translateY(-5px); /* Movimiento hacia arriba en el eje Y en el 60% del tiempo */
+  }
+}

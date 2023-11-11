@@ -1,6 +1,6 @@
 header {
     display: flex;
-    /*justify-content: space-between;*/
+    justify-content: space-between;
     align-items: center;
     position: sticky;
     opacity: 1;
@@ -37,7 +37,7 @@ a{
   }
 /*formato al link de Login*/
   .link-l{
-    background-color: white;
+    background-color: yellow;
     border-color: 0.1 0.1 black;
     border-radius: 0.5rem;
     padding: 0.5rem;
@@ -57,3 +57,60 @@ a{
   }
  
 
+  /* Estilo base para los enlaces */
+.link-r,
+.link-l {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #333;
+  border-radius: 5px;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+/* Estilo para cuando el cursor pasa sobre los enlaces */
+.link-r:hover,
+.link-l:hover {
+  background-color: #333;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Estilo para los enlaces activos (por ejemplo, cuando la página actual es "/register" o "/login") */
+.link-r.active,
+.link-l.active {
+  background-color: #333;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Estilo para la lista y elementos de lista */
+.nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.list-link {
+  margin-right: 20px;
+}
+
+
+
+/* Estilos para el contenedor de la imagen */
+.logo-img {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Estilos para la imagen */
+.logo-img img {
+  width: 200px; /* Ajusta el ancho según tus preferencias */
+  height: auto;
+  border-radius: 50%; /* Para una forma de círculo si lo deseas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}

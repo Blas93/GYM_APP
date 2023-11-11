@@ -6,11 +6,11 @@ import { useActivities } from '../hooks/useActivities'
 
 
 export const HomePage = () => {
-    const {activities, loading, error, addActivity, deleteActivity, editActivity} = useActivities();
+    const {activities, loading, error, addActivity, deleteActivity, likeActivity} = useActivities();
     return ( 
         <>
             <Filter />
-            <ActivitiesList activities={activities} addActivity={addActivity} deleteActivity={deleteActivity} />
+            <ActivitiesList activities={activities} addActivity={addActivity} deleteActivity={deleteActivity} likeActivity={likeActivity}  />
         </>
     )
 }

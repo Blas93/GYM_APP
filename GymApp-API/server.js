@@ -19,9 +19,10 @@ const {
   deleteActivityController,
   requireAdmin,
   getActivitiesController,
+  getFavoriteListController,
 } = require('./controllers/activities');
 const { typologyFilter } = require('./db/filterActivities');
-const { likeActivity } = require('./controllers/likes');
+const { likeActivityController } = require('./controllers/likes');
 const { authenticateUser } = require('./middlewares/authenticateUser');
 
 const app = express();
@@ -40,14 +41,15 @@ app.get('/user/:id', getUserController);
 app.post('/login', loginController);
 
 //Rutas de activities
-app.get('/activities', getActivitiesController);
+app.get('/activities', authenticateUser, getActivitiesController);
 app.post('/activity', requireAdmin, newActivityController);
-app.get('/activity/:id', getActivityController);
+app.get('/activity/:id', authenticateUser, getActivityController);
+app.get('/activities/user', authenticateUser, getFavoriteListController);
 app.put('/activity/:id', requireAdmin, modifyActivityController);
 app.delete('/activity/:id', requireAdmin, deleteActivityController);
 app.get('/activity', typologyFilter);
 
-app.post('/activities/:activityId/like', authenticateUser, likeActivity);
+app.post('/activity/:activityId/like', authenticateUser, likeActivityController);
 
 // Middleware de 404
 app.use((req, res) => {

@@ -1,13 +1,27 @@
-const { getConnection } = require('../db/db');
-const { generateError } = require('../helpers');
+const { toggleLike } = require('../db/likes');
 
+const likeActivityController = async (req, res, next) => {
+  try {
+    const { activityId } = req.params;
+    const userId = req.user.id;
+    const totalLikes = await toggleLike(activityId, userId);
+    res.send({
+      status: 'Ok',
+      data: totalLikes,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+ /*
 // Ruta para dar "like" a una publicación
 const likeActivity = async (req, res, next) => {
   const activityId = req.params.activityId;
   const userId = req.user.id;
   console.log(activityId);
   const conn = await getConnection();
-  try {
+ try {
     // Verificar si el usuario pertenece al grupo específico que puede dar "like"
     // const [user] = await conn.query('SELECT * FROM users WHERE id = ?', [
     //   userId,
@@ -60,6 +74,6 @@ const likeActivity = async (req, res, next) => {
   } finally {
     conn.release();
   }
-};
+};*/
 
-module.exports = { likeActivity };
+module.exports = { likeActivityController };

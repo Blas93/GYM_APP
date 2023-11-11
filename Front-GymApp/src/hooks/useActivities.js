@@ -1,15 +1,19 @@
-import { useEffect, useState } from 'react';
-import { addActivityService, deleteActivityService, getAllActivitiesServices } from '../services';
+import { useContext, useEffect, useState } from 'react';
+import { addActivityService, deleteActivityService, getAllActivitiesServices, likeActivityService } from '../services';
+import { AuthContext } from '../context/AuthContext';
+import { useSearchParams } from 'react-router-dom';
 
 export const useActivities = () => {
 	const [activities, setActivities] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
+	const {token} = useContext(AuthContext)
+	const [searchParams] = useSearchParams();
 
 	useEffect(() => {
 		const loadActivities = async () => {
 			try {
-				const data = await getAllActivitiesServices();
+				const data = await getAllActivitiesServices(token, searchParams);
 				setActivities(data);
 			} catch (error) {
 				setError(error.message);
@@ -18,32 +22,34 @@ export const useActivities = () => {
 			}
 		};
 		loadActivities();
-	}, []);
+	}, [searchParams]);
 	const addActivity = async (activity, token) => {
 		console.log('entrando en addActivity');
 		await addActivityService(activity, token);
-		const allNewActivities = await getAllActivitiesServices();
+		const allNewActivities = await getAllActivitiesServices(token, searchParams);
 		setActivities(allNewActivities);
 	};
-	// Falta crear el service
+	// Hook de delete
 	const deleteActivity = async (id, token) => {
 		await deleteActivityService(id, token);
-		const allNewActivities = await getAllActivitiesServices();
+		const allNewActivities = await getAllActivitiesServices(token, searchParams);
 		setActivities(allNewActivities);
 	};
-	// Hecho en el hook activityDefinition 
-	/*const editActivity = async (id, activity, token) => {
-		await editActivityService(id, activity, token);
-		const allNewActivities = await getAllActivitiesServices();
+	// Hook de Like
+	const likeActivity = async (id, token) => {
+		const totalLikes = await likeActivityService(id, token);
+		const allNewActivities = await getAllActivitiesServices(token, searchParams);
 		setActivities(allNewActivities);
-		// Estaria bien tener un navegate a home
-	};*/
-	// Añadir addActivity, deleteActivity, editActivity al return cuando esten bien
+		return totalLikes
+	};
+	
+	
 	return {
 		activities,
 		loading,
 		error,
 		addActivity,
 		deleteActivity,
+		likeActivity,
 	};
 };

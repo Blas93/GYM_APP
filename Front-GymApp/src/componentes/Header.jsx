@@ -1,39 +1,24 @@
 import { Link } from "react-router-dom"; 
 import '../Css/Header.css';
+import { Auth } from "./Auth";
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 
 <logo />
 export const Header = () => {
+    const {user} = useContext(AuthContext)
     return (
         <header>
-
-
-                
-
-                <div className="logo-img" >
-            <img href="public/logo/logogymapp.png" />
-                </div>  
-
-
-
-            <h2 className="logo-nombre">
-            <Link to ="/">
-                    Gym App
-            </Link>
-            </h2>
-        
-           
-            
-            <nav>
-            <ul className="nav">
-            <li className="list-link">
-                <Link to = "/register" id="r-link" className="link-r"> Registro</Link>
-            </li>
-            <li className="list-link">
-                <Link to = "/login"id="l-link" className="link-l">Acceso</Link>
-        
-            </li>
-        </ul>
-            </nav>
+            {user ? (
+                <Link to ="/home">
+                    <h2 className="logo-nombre">Gym App</h2>
+                </Link>
+            ) : (
+                <Link to ="/">
+                    <h2 className="logo-nombre">Gym App</h2>
+                </Link>
+            )}
+            <Auth />
         </header>
     )
 }

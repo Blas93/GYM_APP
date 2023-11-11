@@ -1,7 +1,12 @@
 //conexión con el servidor para traer la información de las actividades
-export const getAllActivitiesServices = async () => {
+export const getAllActivitiesServices = async (token, searchParams) => {
 	const response = await fetch(
-		`${import.meta.env.VITE_APP_BACKEND}/activities`
+		`${import.meta.env.VITE_APP_BACKEND}/activities?${searchParams.toString()}`,{
+			method: 'GET',
+			headers: {
+				Authorization: token,
+			},
+		}
 	);
 
 	const json = await response.json();
@@ -51,6 +56,38 @@ export const deleteActivityService = async (id, token) => {
 			Authorization: token,
 		},
 	});
+	const json = await response.json();
+	if (!response.ok) {
+		throw new Error(json.message);
+	}
+	return json.data;
+};
+//Se le da like a una activity por su id
+export const likeActivityService = async (id, token) => {
+	const response = await fetch(`${import.meta.env.VITE_APP_BACKEND}/activity/${id}/like`, {
+		method: 'POST',
+		headers: {
+			Authorization: token,
+		},
+	});
+	const json = await response.json();
+	if (!response.ok) {
+		throw new Error(json.message);
+	}
+	return json.data;
+};
+
+//Obtener la lista de actividades favoritas de un usuario
+export const getUserFavoritesActivitiesService = async (token) => {
+	const response = await fetch(
+		`${import.meta.env.VITE_APP_BACKEND}/activities/user`, {
+			method: 'GET',
+			headers: {
+				Authorization: token,
+			},
+		}
+	);
+
 	const json = await response.json();
 	if (!response.ok) {
 		throw new Error(json.message);

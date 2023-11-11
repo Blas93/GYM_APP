@@ -1,28 +1,44 @@
-import useActivity from "../hooks/activityDefinition";
+import '../Css/Likes.css';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-export const LikePage = () => {
-    const likeButton = document.getElementById('likeButton');
-    let likeCount = 0;
+export const LikePage = ({publicacionesWithLike}) => {
+  const [publicaciones, setPublicaciones] = useState(publicacionesWithLike);
+  const [idLike, setIdLike] = useState('');
 
-    likeButton.addEventListener('click', () => {
-        likeCount++;
-        updateLikeCount();
-    });
-
-    function updateLikeCount() {
-        const likeCountElement = document.createElement('p');
-        likeCountElement.textContent = `Likes: ${likeCount}`;
-        document.body.appendChild(likeCountElement);
+  const LikePublicacion = () => {
+    if (idLike === '') {
+      return;
     }
-    return (
-        <section> 
-            <h1> Mis ejercicios Favoritos  </h1>
-            <button>
-            <span>{useActivity.likes}</span>
-            <span class="material-symbols-outlined">star</span>
-            </button>
 
-            <p> Se mostrará el listado de los ejercicio que el usuario tenga como favorito </p> 
-        </section>
+    const nuevasPublicaciones = publicaciones.filter(
+      (publicacion) => publicacion.id !== idLike
     );
-};
+    setPublicaciones(nuevasPublicaciones);
+    setIdLike('');
+  };
+
+  return (
+    <div>
+      <h1>Favoritos</h1>
+      <ul>
+        {publicaciones.map((publicacion) => (
+          <li key={publicacion.id}>
+            {publicacion.contenido}
+            
+          </li>
+        ))}
+      </ul>
+      <div>
+        
+        <input
+          type="icon"
+          value={idLike}
+          onChange={(e) => setIdLike(e.target.value)}
+        />
+        <button>Añadir a Favoritos</button>
+        
+      </div>
+    </div>
+  );
+}

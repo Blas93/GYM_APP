@@ -1,14 +1,15 @@
 const jwt = require('jsonwebtoken');
-const sharp = require('sharp');
+//const sharp = require('sharp');
 const {
   modifyActivity,
   createActivities,
   getActivityById,
   deleteById,
   getActivities,
+  getActivityFavoriteListByUser,
 } = require('../db/activities');
 const { generateError, processAndSavingImg } = require('../helpers');
-const { log } = require('console');
+//const { log } = require('console');
 
 const newActivityController = async (req, res, next) => {
   try {
@@ -69,11 +70,25 @@ const getActivityController = async (req, res, next) => {
 const getActivitiesController = async (req, res, next) => {
   try {
     console.log(req.query);
-    const activities = await getActivities(req.query);
+    const user_id = req.user.id
+    const activities = await getActivities(req.query, user_id);
 
     res.send({
       status: 'Ok',
       data: activities,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+const getFavoriteListController = async (req, res, next) => {
+  try {
+    const user_id = req.user.id
+    const activity = await getActivityFavoriteListByUser(user_id);
+    res.send({
+      status: 'Ok',
+      data: activity,
     });
   } catch (error) {
     next(error);
@@ -151,6 +166,7 @@ function requireAdmin(req, res, next) {
 module.exports = {
   newActivityController,
   getActivityController,
+  getFavoriteListController,
   modifyActivityController,
   deleteActivityController,
   requireAdmin,

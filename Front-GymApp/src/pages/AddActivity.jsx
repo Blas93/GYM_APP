@@ -46,7 +46,7 @@ export const AddActivity = ({ addActivity }) => {
 		<div>
 			<h1 onClick={handleEdit}>Ejercicio a Añadir </h1>
 			{showAdd && (
-				<form onSubmit={handleSubmit}>
+				<form id='card' onSubmit={handleSubmit}>
 					<button type='submit' id='agregar'>
 						Agregar
 					</button>
@@ -65,20 +65,36 @@ export const AddActivity = ({ addActivity }) => {
 						name='description'
 						onChange={(e) => setDescripcion(e.target.value)}
 					/>
-					<input
-						type='text'
+					
+					<select
 						placeholder='Tipología'
 						value={tipologia}
 						name='typology'
 						onChange={(e) => setTipologia(e.target.value)}
-					/>
-					<input
-						type='text'
+					>
+						<option value="">Selecciona una tipología</option>
+						<option value="Fuerza">Fuerza</option>
+						<option value="Resistencia">Resistencia</option>
+						<option value="Cardio">Cardio</option>
+						<option value="Volumen">Volumen</option>
+					</select>
+					<select
+						
 						placeholder='Grupo Muscular'
 						value={grupoMuscular}
 						name='muscleGroup'
 						onChange={(e) => setGrupoMuscular(e.target.value)}
-					/>
+					>
+						<option value="">Selecciona una tipología</option>
+						<option value="Pecho">Pecho</option>
+						<option value="Espalda">Espalda</option>
+						<option value="Hombros">Hombros</option>
+						<option value="Bíceps">Bíceps</option>
+						<option value="Tríceps">Tríceps</option>
+						<option value="Piernas">Piernas</option>
+						</select>
+
+
 					<label>
 						<input
 							type='file'

@@ -5,7 +5,7 @@ import { AddActivity } from '../pages/AddActivity';
 //import { EditInformationActivityPage } from '../pages/EditInformationActivityPage';
 import { AuthContext } from '../context/AuthContext';
 
-export const ActivitiesList = ({ activities, addActivity, deleteActivity }) => {
+export const ActivitiesList = ({ activities, addActivity, deleteActivity, likeActivity }) => {
 	const { user } = useContext(AuthContext); //Necesitamos que el usuario tenga role
 	console.log('activities', activities);
 	return (
@@ -27,7 +27,7 @@ export const ActivitiesList = ({ activities, addActivity, deleteActivity }) => {
 				EditInformationActivityPage={EditInformationActivityPage}
 							/>)}*/}
 							
-								<Activity activity={activity} deleteActivity={deleteActivity}/>
+								<Activity activity={activity} deleteActivity={deleteActivity} likeActivity={likeActivity} />
 							
 						</li>
 						

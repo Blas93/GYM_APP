@@ -2,9 +2,12 @@ import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { Link } from "react-router-dom";
 
-export const Activity = ({ activity, deleteActivity }) => {
-	const {token} = useContext(AuthContext)
-
+export const Activity = ({ activity, deleteActivity, likeActivity }) => {
+	const {user, token} = useContext(AuthContext)
+	let totalLikes = activity.totalLikes
+	const handleClick = () =>{
+		totalLikes = likeActivity(activity.id, token)
+	}
 	
 	return (
 		<article>
@@ -21,7 +24,11 @@ export const Activity = ({ activity, deleteActivity }) => {
 					/>
 				)}
 			</Link>
-			<button onClick={() => deleteActivity(activity.id, token)} >Delete</button>
+			<section>
+				<p>{totalLikes}</p>
+				<button  onClick={handleClick}>{activity.liked ? "❤️" : "🖤"}</button>
+			</section>
+			{user && user.role === "administrator" && <button onClick={() => deleteActivity(activity.id, token)} >Delete</button>}
 		</article>
 	);
 };

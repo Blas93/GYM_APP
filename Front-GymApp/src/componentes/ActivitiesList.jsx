@@ -23,12 +23,7 @@ export const ActivitiesList = ({ activities, addActivity, deleteActivity, likeAc
 					{activities.map((activity) => (
 						
 						<li key={activity.id}>
-							{/*{user && user.role === 'administrator' && ( <EditInformationActivityPage
-				EditInformationActivityPage={EditInformationActivityPage}
-							/>)}*/}
-							
-								<Activity activity={activity} deleteActivity={deleteActivity} likeActivity={likeActivity} />
-							
+							<Activity activity={activity} deleteActivity={deleteActivity} likeActivity={likeActivity} />
 						</li>
 						
 					))}

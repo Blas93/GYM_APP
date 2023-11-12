@@ -52,14 +52,14 @@ async function initDB() {
     // Inserción de usuarios
     await connection.query(`
 INSERT INTO user (email, user_name, password) 
-VALUES('tatandeveloper@gymapp.com', 'Tatán', '6789'),
-  ('jesusdeveloper@gymapp.com', 'Jesús', '6789'),
-  ('blasdeveloper@gymapp.com', 'Blasco', '6789'),
-  ('luismartinez.12@gmail.com', 'Luis', '1234'),
-  ('mariadeveloper@gymapp.com', 'Maria', '6789'),
-  ('claudiamateo@gmail.com', 'Claudia', '6789'),
-  ('esteban_89@gmail.com', 'Esteban', '1234'),
-  ('lupombo@gmail.com', 'Lucía', '6789');
+VALUES('tatandeveloper@gymapp.com', 'Tatán', 'HASH_DE_LA_CONTRASEÑA_1'),
+  ('jesusdeveloper@gymapp.com', 'Jesús', 'HASH_DE_LA_CONTRASEÑA_2'),
+  ('blasdeveloper@gymapp.com', 'Blasco', 'HASH_DE_LA_CONTRASEÑA_3'),
+  ('luismartinez.12@gmail.com', 'Luis', 'HASH_DE_LA_CONTRASEÑA_4'),
+  ('mariadeveloper@gymapp.com', 'Maria', 'HASH_DE_LA_CONTRASEÑA_5'),
+  ('claudiamateo@gmail.com', 'Claudia', 'HASH_DE_LA_CONTRASEÑA_6'),
+  ('esteban_89@gmail.com', 'Esteban', 'HASH_DE_LA_CONTRASEÑA_7'),
+  ('lupombo@gmail.com', 'Lucía', 'HASH_DE_LA_CONTRASEÑA_8');
 `);
 
     //Inserción de actividades

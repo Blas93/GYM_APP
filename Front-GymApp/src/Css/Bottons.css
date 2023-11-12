@@ -1,0 +1,71 @@
+ /*formato común para todos los botones:*/
+ button  .lgo-link .b-Registro .b-acceder .buscar .agregar .subida { 
+  font-size: 14px; /* Tamaño de fuente más pequeño */
+  padding: 5px 10px; /* Espacio alrededor del botón */
+  color: #fff; /* Color del texto */
+  background-color: #000; /* Color de fondo del botón */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s, color 0.3s; /* Agrega transición de color de fondo y texto */
+}
+button:hover  .lgo-link .buscar .b-Registro{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega sombra al pasar el ratón */
+  color: yellow; /* Color de fondo al pasar sobre el botón */
+}
+
+
+/*botón editar*/
+Boton-editar{
+
+}
+/*botón agregar*/
+.agregar{
+
+}
+/*botón buscar del filtro*/
+.buscar{
+ 
+}
+/*botón subida imagen (imagen)*/
+.subida{
+
+}
+/*botón eliminar*/
+.b-eliminar{
+
+}
+/*botón guardar*/
+.guardar{
+
+}
+/*botón guardad*/
+.b-editar{
+
+}
+/*botón añadir favoritos*/
+.b-añadir{
+
+}
+/*botón acceder*/
+.b-acceder{
+
+}
+/*botón registro usuario*/
+.b-Registro{
+
+}
+/*botón logOut*/
+.lgo-link{
+  
+}
+
+.subida{
+    size: 1rem 1rem;
+  }
+
+.b-eliminar #b-eliminar{
+    background-color: transparent;
+  }
+
+ 
+

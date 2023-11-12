@@ -118,6 +118,7 @@ a{
 
 /* Estilos para el logo */
 .logo-nombre {
+  text-align: center;
   font-family: 'cursive'; /* Cambia la fuente a un estilo cursiva */
   font-size: 2em;
   margin: 0;

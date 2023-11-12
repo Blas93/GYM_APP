@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import upload from '../svg/upload-svgrepo-com.svg';
+import añadir from '../svg/Añadir.svg';
 import '../Css/AddActivity.css';
 //import { useNavigate } from "react-router-dom";
 
@@ -44,7 +45,9 @@ export const AddActivity = ({ addActivity }) => {
 
 	return (
 		<div>
-			<h1 onClick={handleEdit}>Ejercicio a Añadir </h1>
+			<h1 onClick ={handleEdit} >
+				<img id='Añadir' src={añadir} alt='Añadir' title='Añadir actividad' />	
+			</h1>
 			{showAdd && (
 				<form id='card' onSubmit={handleSubmit}>
 					<button type='submit' id='agregar'>
@@ -66,7 +69,7 @@ export const AddActivity = ({ addActivity }) => {
 						onChange={(e) => setDescripcion(e.target.value)}
 					/>
 					
-					<select
+					<select className='t-select'
 						placeholder='Tipología'
 						value={tipologia}
 						name='typology'
@@ -78,7 +81,7 @@ export const AddActivity = ({ addActivity }) => {
 						<option value="Cardio">Cardio</option>
 						<option value="Volumen">Volumen</option>
 					</select>
-					<select
+					<select className='gm-select'
 						
 						placeholder='Grupo Muscular'
 						value={grupoMuscular}

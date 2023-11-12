@@ -20,19 +20,18 @@
     text-align: center;
     margin: 0;
     padding: 10px;
-    background-color: #000;
+    /*background-color: #000; quito el color de fondo porque no quiero que tenga el mismo formato que los botones*/
     border-radius: 10px;
-    
-    transition: background-color 0.3s, color 0.3s;
+   /* transition: background-color 0.3s, color 0.3s;*/
 
     /* Centrado vertical y horizontal */
    
 }
 
-.gratuito:hover {
+/*.gratuito:hover {
     background-color: #FFD700;
     color: #000;
-}
+} La palabra gratuito no es un botón por lo que no quiero que tenga el mismo formato que los botones*/
 
 /*Imágenes correspondientes a las tres etiquetas:*/
 #label-cuando {

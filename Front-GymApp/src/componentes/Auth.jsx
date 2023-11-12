@@ -16,7 +16,7 @@ export const Auth = () => {
                     <img className="Avatar-img" src={defaultUser} alt="Avatar" />
                 </Link>
                 <Link to = "/" id="lo-link" className="link">
-                    <button onClick={logout}>logOut</button>
+                    <button  className="lgo-link" onClick={logout}>logOut</button>
                 </Link>
             </p>
         );

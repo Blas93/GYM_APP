@@ -36,7 +36,7 @@ export const LikePage = ({publicacionesWithLike}) => {
           value={idLike}
           onChange={(e) => setIdLike(e.target.value)}
         />
-        <button>Añadir a Favoritos</button>
+        <button className='b-añadir'>Añadir a Favoritos</button>
         
       </div>
     </div>

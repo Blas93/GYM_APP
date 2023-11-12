@@ -28,24 +28,6 @@ p {
     margin-right: 10px;
 }
 
-/* Estilos para el botón de logout */
-button {
-    background-color: #000; /* Negro */
-   
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Agrega transición de color de fondo y texto */
-}
-
-button:hover {
-   
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega sombra al pasar el ratón */
-}
-
-
-
 
 /* Estilos para los enlaces de registro y login */
 .link {

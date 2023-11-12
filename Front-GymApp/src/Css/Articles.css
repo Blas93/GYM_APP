@@ -6,7 +6,8 @@ article {
     background-color: #fff;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     font-weight: bolder;
-    
+    width: 100%;/*hace que la tarjeta de la actividad ocupe el 100%*/
+    height: 20rem; /*ancho de la tarjeta*/
   }
   
 

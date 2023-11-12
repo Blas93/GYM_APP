@@ -57,8 +57,8 @@ input#password{
 
   /* Estilos para el botón de inicio de sesión */
   button {
-    background-color: #000; /* Color de fondo del botón */
-    color: #fff; /* Color del texto del botón */
+    background-color: white; /* Color de fondo del botón */
+    color: black; /* Color del texto del botón */
     border: none; /* Elimina el borde del botón */
     padding: 10px 20px; /* Espaciado interno del botón */
     border-radius: 5px; /* Borde redondeado del botón */

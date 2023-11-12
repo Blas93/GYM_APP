@@ -13,7 +13,7 @@ export const Activity = ({ activity, deleteActivity, likeActivity }) => {
 	
 	return (
 		<article>
-			<Link to={`/activity/${activity.id}`}>
+			<Link className='l-card'to={`/activity/${activity.id}`}>
 				<p id="name">{activity.activity_name}</p>
 				<p id="description">{activity.description}</p>
 				<p id="musculargroup">{activity.muscle_group}</p>
@@ -27,7 +27,7 @@ export const Activity = ({ activity, deleteActivity, likeActivity }) => {
 				)}
 			</Link>
 			<section>
-				<p>{totalLikes}</p>
+				<p className="totalLikes">{totalLikes}</p>
 				<button className="b-favorite" onClick={handleClick}>{activity.liked ? 
 				<img id='favorite' src={favorite} alt='favorite' title='favorite image' /> : <img id='favorite-like' src={favorite} alt='favorite' title='favorite image' /> }</button>
 			</section>

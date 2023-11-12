@@ -6,4 +6,8 @@ h2 {
     letter-spacing: 2px; /* Espaciado entre letras */
     margin-bottom: 20px; /* Margen inferior para separar del contenido siguiente */
   }
-  
+
+.l-card{
+text-align: center;
+vertical-align: middle;
+}

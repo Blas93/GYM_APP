@@ -44,8 +44,8 @@ export const AddActivity = ({ addActivity }) => {
 	};
 
 	return (
-		<div>
-			<h1 onClick ={handleEdit} >
+		<div className='cuadro-formulario'>
+			<h1 className='t-h1' onClick ={handleEdit} >
 				<img id='Añadir' src={añadir} alt='Añadir' title='Añadir actividad' />	
 			</h1>
 			{showAdd && (

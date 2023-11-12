@@ -8,7 +8,7 @@ export function Counter () {
 return (
     <div>
         <h2>Counter</h2>
-        <p>(count)</p>
+        <p className="p-counter">(count)</p>
         <button onClick={increment}> Increment </button> 
     </div>
 

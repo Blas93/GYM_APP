@@ -13,6 +13,7 @@
 .cuadro-formulario{
   background-color: white;
   box-shadow: none; /* Sombra */
+  border: none; /*quito el fondo para que no se vea el div que lo envuelve*/
 }
 .t-h1{
   background-color: white;

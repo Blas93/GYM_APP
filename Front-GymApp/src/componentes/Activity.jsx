@@ -3,7 +3,12 @@ import { AuthContext } from "../context/AuthContext";
 import { Link } from "react-router-dom";
 import Eliminar from "../svg/Eliminar.svg"
 import favorite from "../svg/favorite.svg"
+
+import favoritelike from "../svg/favoritelike.svg"
+
+
 import "../Css/Activity.css"
+
 export const Activity = ({ activity, deleteActivity, likeActivity }) => {
 	const {user, token} = useContext(AuthContext)
 	let totalLikes = activity.totalLikes
@@ -29,7 +34,7 @@ export const Activity = ({ activity, deleteActivity, likeActivity }) => {
 			<section>
 				<p className="totalLikes">{totalLikes}</p>
 				<button className="b-favorite" onClick={handleClick}>{activity.liked ? 
-				<img id='favorite' src={favorite} alt='favorite' title='favorite image' /> : <img id='favorite-like' src={favorite} alt='favorite' title='favorite image' /> }</button>
+				<img id='favorite' src={favorite} alt='favorite' title='favorite image' /> : <img id='favoritelike' src={favoritelike} alt='favorite' title='favorite image' /> }</button>
 			</section>
 			{user && user.role === "administrator" && 
 				<button className="b-eliminar" onClick={() => deleteActivity(activity.id, token)} >

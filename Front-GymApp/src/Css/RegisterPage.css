@@ -39,3 +39,11 @@ p {
   margin-top: 10px; /* Espaciado superior del mensaje de error */
   
 }
+button.b-Registro{
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

@@ -3,7 +3,11 @@ import { AuthContext } from "../context/AuthContext";
 import { Link } from "react-router-dom";
 import Eliminar from "../svg/Eliminar.svg"
 import favorite from "../svg/favorite.svg"
+
 import favoritelike from "../svg/favoritelike.svg"
+
+
+import "../Css/Activity.css"
 
 export const Activity = ({ activity, deleteActivity, likeActivity }) => {
 	const {user, token} = useContext(AuthContext)

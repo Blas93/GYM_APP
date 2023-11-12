@@ -56,20 +56,16 @@ input#password{
 }
 
   /* Estilos para el botón de inicio de sesión */
-  button {
-    background-color: white; /* Color de fondo del botón */
-    color: black; /* Color del texto del botón */
-    border: none; /* Elimina el borde del botón */
-    padding: 10px 20px; /* Espaciado interno del botón */
-    border-radius: 5px; /* Borde redondeado del botón */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    transition: background-color 0.3s ease; /* Transición de color de fondo */
-    /*width: 100%; /* Ocupa el ancho completo del formulario */
+  button.b-acceder {
+    color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   }
   
-  button:hover {
-    color: yellow; /* Color de fondo al pasar sobre el botón */
-  }
+  
   
   /* Estilos para el mensaje de error */
   p {

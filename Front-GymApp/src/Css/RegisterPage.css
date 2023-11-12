@@ -32,23 +32,6 @@ label {
   padding: 10px;
   line-height: 1.5;
 }
-
-/* Estilos para el botón de registro */
-button {
-  background-color: #000; /* Color de fondo del botón */
-  color: #fff; /* Color del texto del botón */
-  border: none; /* Elimina el borde del botón */
-  padding: 10px 20px; /* Espaciado interno del botón */
-  border-radius: 5px; /* Borde redondeado del botón */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  transition: background-color 0.3s ease; /* Transición de color de fondo */
-  /*width: 100%; (lo omito porque quiero que ocupe el tamaño del botón) ocupa el ancho completo del formulario */
-}
-
-/*button:hover {
-  color: yellow; /* Color de fondo al pasar sobre el botón */
-/*}/*
-
 /* Estilos para el mensaje de error */
 p {
    /* Color rojo para el mensaje de error */

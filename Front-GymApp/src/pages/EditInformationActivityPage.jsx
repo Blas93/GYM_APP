@@ -22,7 +22,7 @@ setNuevoContenido('');
 return (
 <div>
    <h1>Editar Publicacion</h1>
-    <button onClick={editarPublicacion}>Guardar</button>
+    <button className='b-guardar' onClick={editarPublicacion}>Guardar</button>
     <ul>
     {publicaciones.map((publicacion) => (
         <li key={publicacion.id}>
@@ -37,7 +37,7 @@ return (
           ) : (
             <div>
               {publicacion.contenido}
-              <button onClick={() => setIdEditar(publicacion.id)}>Editar</button>
+              <button className='b-editar' onClick={() => setIdEditar(publicacion.id)}>Editar</button>
             </div>
           )}
         </li>

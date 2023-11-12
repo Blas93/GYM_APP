@@ -45,7 +45,7 @@ export const LoginPage = () => {
         onChange={(e) => setPassword(e.target.value)} />
         </fieldset>
 
-        <button>Acceder</button>
+        <button className='b-acceder'>Acceder</button>
         {error ? <p> {error} </p>:null} 
     </form>
     </section>

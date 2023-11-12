@@ -82,7 +82,7 @@ export const RegisterPage = () => {
         />
         </label>
         </fieldset>
-        <button type="submit">Registrar Usuario</button>
+        <button className='b-Registro' type="submit">Registrar Usuario</button>
       </form>
       {error && <p>{error}</p> }
     </div>

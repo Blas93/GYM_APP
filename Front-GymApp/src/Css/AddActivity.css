@@ -7,9 +7,7 @@
   cursor: pointer; /* Cambia el cursor al pasar sobre el botón de eliminar por ID */
   transition: background-color 0.3s ease; /* Transición de color de fondo */
 }
-#agregar:hover {
-    color: yellow; /* Color de fondo al pasar sobre el botón */
-  }
+
 
 
   h1 {
@@ -20,7 +18,20 @@
     padding: 5px 10px;
   }
 
-   
-#subida{
-  size: 1rem 1rem;
+#card{
+  flex-direction: column;
+  justify-content: space-evenly;
+  column-span: all;
+  span: 2rem;
 }
+
+select #gm-select{
+  margin: 1rem;
+}
+
+#agregar{
+  margin-bottom: 0.5rem;
+}
+#agregar:hover {
+    color: yellow; /* Color de fondo al pasar sobre el botón */
+  }

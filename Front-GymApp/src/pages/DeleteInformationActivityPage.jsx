@@ -35,7 +35,7 @@ export const DeleteInformationActivityPage = ({publicacionesToDelete }) => {
           value={idEliminar}
           onChange={(e) => setIdEliminar(e.target.value)}
         />
-        <button onClick={eliminarPublicacion}>Eliminar</button>
+        <button className='b-eliminar' onClick={eliminarPublicacion}>Eliminar</button>
       </div>
     </div>
   );

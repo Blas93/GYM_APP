@@ -37,8 +37,9 @@ section#login  {
   }
   
   fieldset{
-    margin-bottom: 15px;
+    margin-bottom: 3px;
     width: 100%;
+    line-height: 1.5;
   }
 
   /* Estilos para los campos de entrada y etiquetas */
@@ -46,6 +47,7 @@ section#login  {
     display: block; /* Muestra cada etiqueta en una línea separada */
     margin-bottom: 10px; /* Espaciado inferior entre etiquetas */
     font-weight: bold; /* Texto en negrita para etiquetas */
+    
   }
   
   

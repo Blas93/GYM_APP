@@ -14,19 +14,25 @@
 
 
 .gratuito {
+    font-size: 1em;
+    font-weight: bold;
+    color: #FFD700;
     text-align: center;
-    
-    color: #FFD700; /* Amarillo */
-    position: fixed;
-   
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #000; /* Fondo negro */
-   
+    margin: 0;
+    padding: 10px;
+    background-color: #000;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); /* Sombra amarilla */
-    }
+    
+    transition: background-color 0.3s, color 0.3s;
 
+    /* Centrado vertical y horizontal */
+   
+}
+
+.gratuito:hover {
+    background-color: #FFD700;
+    color: #000;
+}
 
 /*Imágenes correspondientes a las tres etiquetas:*/
 #label-cuando {
@@ -94,7 +100,7 @@ h3 {
 
 fieldset {
     border: 2px solid transparent; /* Amarillo */
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     width: calc(33.3333% - 20px); /* El 20px es la suma de los márgenes horizontales */
     box-sizing: border-box;
@@ -129,6 +135,7 @@ p {
     display: flex; /*coloca en bloque las cajas*/
     justify-content: space-between; /*separa a la misma distancia las cajas entre si*/
     margin-top: 30px;
+    width: 100%;
 }
     .home-public{
     box-sizing: content-box;

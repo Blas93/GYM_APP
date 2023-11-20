@@ -25,7 +25,7 @@ export const getSigleActivityService = async (id, token) => {
  {
 	method: 'GET',
 	headers: {
-		Autorization: token,
+	Authorization: token,
 	},
  }
 );

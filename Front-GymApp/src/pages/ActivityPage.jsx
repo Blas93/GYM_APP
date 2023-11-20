@@ -6,8 +6,8 @@ import { AuthContext } from "../context/AuthContext";
 
 export const ActivityPage = () => {
   const { id } = useParams();
-  const { activity, loading, error, editActivity } = useActivity(id);
-  const {token} = useContext(AuthContext)
+  const { activity, loading, error, editActivity } = useActivity(id, user, token);
+  const {user,token} = useContext(AuthContext)
   const navigate = useNavigate()
   const [activityData, setActivityData] = useState({
     activity_name: "",

@@ -3,7 +3,7 @@ import { editActivityService, getSigleActivityService } from "../services";
 //import { useSearchParams } from "react-router-dom";
 
 
-const useActivity = (id)=> {
+const useActivity = (id, token)=> {
 const [activity, setActivity] = useState (null);
 const [loading, setLoading] = useState (true);
 const [error, setError] = useState("");
@@ -22,7 +22,7 @@ const loadactivity =async () => {
 
         
 
-        const data = await getSigleActivityService (id);
+        const data = await getSigleActivityService (id, token);
         setActivity (data);
     } catch (error) {
         setError(error.message);

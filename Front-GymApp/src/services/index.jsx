@@ -18,11 +18,17 @@ export const getAllActivitiesServices = async (token, searchParams) => {
 
 //conexión con el servidor para traer la información de la actividad
 //añadir aqui un header , hacer el fetch igual que la función de abajo, getuserdatasevices, modf. la ruta. 
-export const getSigleActivityService = async (id) => {
+export const getSigleActivityService = async (id, token) => {
 	const response = await fetch(
-		`${import.meta.env.VITE_APP_BACKEND}/activity/${id}`
-	);
-
+		`${import.meta.env.VITE_APP_BACKEND}/activity/${id}`,
+	
+ {
+	method: 'GET',
+	headers: {
+		Autorization: token,
+	},
+ }
+);
 	const json = await response.json();
 	if (!response.ok) {
 		throw new Error(json.message);

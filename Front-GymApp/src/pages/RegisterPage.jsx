@@ -41,8 +41,8 @@ export const RegisterPage = () => {
 
   return (
     <div>
-      <h1>Registro de Usuario</h1>
-      <form onSubmit={handleSubmit}>
+      <h1 id='registro'>Registro de Usuario</h1>
+      <form id='register' onSubmit={handleSubmit}>
         <fieldset>
         <label>
           Nombre:

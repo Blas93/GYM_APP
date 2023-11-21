@@ -24,7 +24,7 @@ export const LoginPage = () => {
 
     return (
     <section id='login'> 
-    <h1> Acceso al área privada </h1> 
+    <h1 id='accesso'> Acceso al área privada </h1> 
     <form id='login' onSubmit={handleSubmit}>
         <fieldset>
             <label htmlFor ="email">Email:</label>

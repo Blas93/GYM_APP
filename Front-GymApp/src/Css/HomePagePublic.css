@@ -1,5 +1,5 @@
 
-.titulo-principal {
+h1.titulo-principal {
     padding: 2rem;
 }
 
@@ -122,6 +122,8 @@ p {
     justify-content: space-between;
     background-color: white;
     width: 100%;
+    align-items: center;
+
 }
 
 /* Asegura que cada bloque dentro de .home-public-blocks ocupe el ancho completo */
@@ -141,9 +143,7 @@ p {
     width: 100%;
     height: 100%;
 }
- #root{
-    width: 100%;
- }   
+ 
  fieldset {
     border: 2px solid #FFD700; /* Amarillo */
     padding: 15px;

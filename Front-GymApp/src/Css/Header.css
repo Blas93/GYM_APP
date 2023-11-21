@@ -10,11 +10,10 @@ header {
     width: 100%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 1rem 1rem;
+    height: 5rem;
    
 }
-header{
-    height: 5rem;
-   }
+
 
  a {
     color: #000000;
@@ -99,31 +98,19 @@ a{
   margin-right: 20px;
 }
 
-
-
-/* Estilos para el contenedor de la imagen */
-.logo-img {
-  text-align: center;
-  margin-top: 20px;
+.logo-imagen {
+  width: 50px; /* Ajusta el ancho según sea necesario */
+  height: 50px; /* Ajusta la altura según sea necesario */
+  margin-right: 10px; /* Ajusta el margen derecho según sea necesario */
 }
 
-/* Estilos para la imagen */
-.logo-img img {
-  width: 200px; /* Ajusta el ancho según tus preferencias */
-  height: auto;
-  border-radius: 50%; /* Para una forma de círculo si lo deseas */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
-}
-
-
-/* Estilos para el logo */
 .logo-nombre {
-  text-align: center;
-  font-family: 'cursive'; /* Cambia la fuente a un estilo cursiva */
-  font-size: 2em;
-  margin: 0;
-  color: black; /* Amarillo */
-  text-decoration: none; /* Elimina el subrayado */
+  display: flex;
+  align-items: center;
 }
+
+
+
+
 
 

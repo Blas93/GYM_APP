@@ -1,11 +1,11 @@
-h1{
+h1#acceso{
   font-family: 'Arial', sans-serif; /* Tipo de letra */
     color: #333; /* Color de texto oscuro */
     text-align: center; /* Centra el texto */
     background-color: transparent; /* Fondo amarillo */
-    padding: 20px; /* Añade espacio alrededor del texto */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    padding: 10px 20px; /* Añade espacio alrededor del texto */
+    font-size: 16px;
+    font-weight: bold;
 }
 /* Estilos para el contenedor principal */
 section#login  {
@@ -15,12 +15,10 @@ section#login  {
     margin: 0 auto; /* Centrar el formulario horizontalmente */
     padding: 900px; /* Espaciado interno del formulario */
     background-color: #f5f5f5; /* Color de fondo */
-    border-radius: 10px; /* Borde redondeado */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
-    border: 1px solid #ccc;
     padding: 10px;
     margin: 10px;
-    background-color: #f0f0f0;
+    background-color: transparent;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
  
@@ -28,7 +26,7 @@ section#login  {
   /* Estilos para el formulario */
    form#login {
    
-    height: 439px;
+    height: 400px;
     width: 100%; /* Ancho del 100% del contenedor */
     padding: 10px; /* Espaciado interno del formulario */
     background-color: #fff; /* Color de fondo */

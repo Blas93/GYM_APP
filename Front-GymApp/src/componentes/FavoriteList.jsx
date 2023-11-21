@@ -2,14 +2,14 @@ import { useContext } from 'react'
 import useFavoritesActivities from '../hooks/useFavoritesActivities'
 import { AuthContext } from '../context/AuthContext'
 import { Activity } from './Activity'
-
+import '../Css/FavoriteList.css'
 export const FavoriteList = () => {
   const {token} = useContext(AuthContext)
   const {favorites, loading, error, deleteFavoriteActivity, likeFavoriteActivity} = useFavoritesActivities(token)
   console.log(favorites)
   return (
     <section>
-			<h2>Lista de Favoritos</h2>
+			<h2 id='favoritos'>Lista de Favoritos</h2>
 
 			{favorites?.length ? (
 				<ul>
@@ -20,7 +20,7 @@ export const FavoriteList = () => {
 					))}
 				</ul>
 			) : (
-				<p>No hay ninguna actividad todavía</p>
+				<p id='NoActividad'>No hay ninguna actividad todavía</p>
 			)}
 		</section>
   )

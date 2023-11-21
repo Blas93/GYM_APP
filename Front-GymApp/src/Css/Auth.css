@@ -1,5 +1,5 @@
 /* Estilos para el párrafo que contiene la información del usuario */
-p {
+p#login {
     
     color: #000;
     
@@ -51,3 +51,24 @@ p {
 .link:active {
     transform: scale(0.95); /* Efecto de escala al hacer clic */
 }
+
+.lgo-link {
+    background-color: yellow;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px; /* Esquinas redondeadas */
+    transition: background-color 0.3s, color 0.3s, border-radius 0.3s; /* Transición de colores y esquinas redondeadas */
+  }
+  
+  .lgo-link:hover,
+  .lgo-link:focus {
+    background-color: black;
+    color: yellow;
+    border-radius: 10px; /* Cambia las esquinas redondeadas al pasar el cursor */
+    outline-offset: 3px;
+  }
+  
+  
+  

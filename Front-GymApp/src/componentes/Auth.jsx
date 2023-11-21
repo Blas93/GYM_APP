@@ -10,13 +10,13 @@ export const Auth = () => {
     
     if (user) {
         return (
-            <p>
-                loged is as {user.name} 
+            <p id='login'>
+                Loged is as {user.user_name} 
                 <Link to = "/user" id="lo-link" className="link">
                     <img className="Avatar-img" src={defaultUser} alt="Avatar" />
                 </Link>
                 <Link to = "/" id="lo-link" className="link">
-                    <button  className="lgo-link" onClick={logout}>logOut</button>
+                    <button  className="lgo-link" onClick={logout}>LogOut</button>
                 </Link>
             </p>
         );
